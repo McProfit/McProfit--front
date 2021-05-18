@@ -1,0 +1,110 @@
+body {
+  font-family: "Segoe UI";
+  font-size: 17px;
+}
+
+.clear-list {
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.title__center {
+  text-align: center;
+}
+.title__right {
+  text-align: right;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title,
+.product__item__title {
+  font-size: 15px;
+}
+
+a strong,
+.navbar .logotype {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.section .text-lead .title,
+.section .text-lead strong,
+.footer .footer-heading {
+  font-size: 18px;
+  line-height: 23px;
+}
+.section .text-lead {
+  font-weight: 400;
+}
+.section .text-lead .title,
+.section .text-lead strong {
+  font-weight: 500;
+}
+
+.section .image-cont {
+  order: 1;
+}
+.section .text-lead {
+  order: 2;
+}
+
+.main__section .text-lead strong,
+.section__tools .tools__text__logo {
+  font-weight: 700;
+}
+.main__section .text-lead {
+  order: 2;
+}
+.main__section .image-cont {
+  width: 100%;
+  
+  order: 1;
+}
+.main__section .image-cont img {
+  width: 150px;
+  height: 150px;
+}
+
+.section__products .product__item__title,
+.section__products .product__item__bold,
+.section__products .btn {
+  width: 100%;
+}
+.section__products .product__item__title {
+  text-align: center;
+}
+.section__products .product__item__bold {
+  font-weight: bold;
+  text-align: left;
+}
+
+.section__resolve .img-poster {
+  max-width: 250px;
+  max-height: 250px;
+  width: 100%;
+  height: 100%;
+
+  margin-left: auto;
+  margin-left: auto;
+}
+
+.section__tools .using-list {
+  justify-content: space-around;
+}
+.footer .d-flex {
+  justify-content: space-between;
+}
+
+.footer .footer-logo-link {
+  max-width: 75px;
+  max-height: 75px;
+  width: 100%;
+  height: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
