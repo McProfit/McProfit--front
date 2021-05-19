@@ -2,7 +2,7 @@ body {
   font-family: "Segoe UI";
   font-size: 17px;
 }
-
+ 
 .clear-list {
   padding-left: 0;
 
@@ -22,7 +22,7 @@ img {
 
 .title,
 .product__item__title {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 a strong,
