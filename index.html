@@ -54,7 +54,7 @@
     </section>
     <section class="section section__products mt-5">
       <div class="container">
-        <ul role="list" class="clear-list">
+        <ul role="list" class="clear-list products-list">
         <li class="product__item neu-flat rounded-2 p-2 d-flex fx-wrap fx-center">
           <h3 class="product__item__title">Разработка интернет магазина под ключ</h3>
           <img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608a841b60f19c4b54d7d8bd_e-comm.svg" loading="lazy" alt="" class="mt-2 product-poster" />
@@ -126,21 +126,25 @@
         <img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608abe1f49e5b47235f2796b_target.svg" loading="lazy" alt="" class="img-poster" />
       </div>
       <div class="container neu-bordered rounded-2 p-3 mt-5">
-        <form>
+        <form class="lead-form">
           <div class="form-field">
             <label for="name">Имя</label>
             <input type="text" id="name" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1">
+          </div>
+          <div class="form-field">
+            <label for="orgname">Название организации</label>
+            <input type="text" id="orgname" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1">
           </div>
           <div class="form-field">
             <label for="pos">Должность</label>
             <input type="text" id="pos" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1">
           </div>
           <div class="form-field">
-            <label for="email">Email</label>
+            <label for="email"><strong>Рабочий</strong> Email</label>
             <input type="email" id="email" class="form-control neu-flat rounded-1" placeholder="contact@example.com" />
           </div>
-          <div class="form-field">
-            <label class="">Вас интересует</label>
+          <div class="form-field prod-sel">
+            <label>Вас интересует</label>
             <label class="form-check m-2">
               <input type="radio" name="product" />
               <span>Продвижение бизнеса</span>
@@ -158,10 +162,11 @@
               <span>Нужен сайт</span>
             </label>
           </div>
-          <div class="form-field">
+          <div class="form-field comment">
             <label for="textarea">Проясните какие вопросы вас интересуют</label>
             <textarea id="textarea" class="form-control neu-flat rounded-1" data-neu-focus="neu-pressed"></textarea>
           </div>
+          <button class="btn rounded-1 neu-pressed neu-lighten  mt-3 mb-2 send-button">Записаться</buttton>
         </form>
       </div>
     </section>
@@ -169,15 +174,15 @@
       <div class="container neu-bordered rounded-2 p-3">
         <h1 class="title no-margins title__center">В решении задач мы используем профессиональные инструменты</h1>
         <ul role="list" class="clear-list d-flex fx-wrap using-list">
-          <li class="item neu-flat rounded-2 p-2 m-2"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608bab2e518ab624c2d233d7_browserstack-seeklogo.com.svg" loading="lazy" width="50" alt="" /></li>
-          <li class="item neu-flat rounded-2 p-2 m-2"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608bae12c84fe0decc1c2197_semrush-seeklogo.svg" loading="lazy" height="30" alt="" /></li>
-          <li class="item neu-flat rounded-2 p-2 m-2"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608baaccd3f1beacf817fbd1_axure-seeklogo.com.svg" loading="lazy" height="30" alt="" /></li>
-          <li class="item neu-flat rounded-2 p-2 m-2"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608baf06518ab6c5e3d24f2b_similarweb-pro-seeklogo.svg" loading="lazy" height="30" alt="" /></li>
-          <li class="item neu-flat rounded-2 p-2 m-2"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608bb3fd7f3b376274f02bcf_serpstat-seeklogo.com.svg" loading="lazy" height="30" alt="" /></li>
-          <li class="item neu-flat rounded-2 p-2 m-2">
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608bab2e518ab624c2d233d7_browserstack-seeklogo.com.svg" loading="lazy" width="50" alt="" /></li>
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608bae12c84fe0decc1c2197_semrush-seeklogo.svg" loading="lazy" height="30" alt="" /></li>
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608baaccd3f1beacf817fbd1_axure-seeklogo.com.svg" loading="lazy" height="30" alt="" /></li>
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608baf06518ab6c5e3d24f2b_similarweb-pro-seeklogo.svg" loading="lazy" height="30" alt="" /></li>
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608bb3fd7f3b376274f02bcf_serpstat-seeklogo.com.svg" loading="lazy" height="30" alt="" /></li>
+          <li class="logo tools__text__logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4">
             <p class="tools__text__logo m-0">romi.center</p>
           </li>
-          <li class="item neu-flat rounded-2 p-2 m-2">
+          <li class="logo tools__text__logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4">
             <p class="tools__text__logo m-0">publer.pro</p>
         </li>
         </ul>
@@ -199,7 +204,7 @@
             <li class="rounded-1 neu-pressed neu-lighten p-2 mt-2"><a href="#" class="footer-link">Конверсионный аудит сайта</a></li>
           </ul>
         </div>
-        <div class="ml-5 mr-5">
+        <div class="margin">
           <h2 class="footer-heading">Навигация</h2>
           <ul role="list" class="clear-list">
             <li class="rounded-1 neu-pressed neu-lighten p-2 mt-2"><a href="#" class="footer-link">Главная</a></li>
