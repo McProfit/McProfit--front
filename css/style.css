@@ -24,6 +24,10 @@ img {
 .product__item__title {
   font-size: 18px;
 }
+.subtitle {
+    font-weight: 500;
+    font-size: 16px;
+}
 
 a strong,
 .navbar .logotype {
@@ -75,7 +79,8 @@ a strong,
 
 .section__products .product__item__title,
 .section__products .product__item__bold,
-.section__products .btn {
+.section__products .btn,
+.width-100 {
   width: 100%;
 }
 .section__products .product__item__title,
@@ -140,6 +145,10 @@ header .dropdown .dropdown-content {
     }
 } 
 @media (min-width: 1024px) {
+    .section {
+        position: relative;
+    }
+    
     .section .image-cont {
         display: block;
     }
