@@ -170,6 +170,9 @@ header .dropdown .dropdown-content {
     width: 100%;
 }
 
+.footer .margin {
+    width: 100%;
+}
 .footer .social-media {
     justify-content: space-around;
 }
@@ -180,6 +183,12 @@ header .dropdown .dropdown-content {
 .footer .social-media img {
     width: 100%;
     height: 100%;
+}
+.footer .self-center {
+    max-width: 400px;
+    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (min-width: 768px) {
@@ -260,4 +269,15 @@ header .dropdown .dropdown-content {
         order: 2;
     }
 
+    .footer .footer-logo-link {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .footer .margin {
+        max-width: 250px;
+        
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
