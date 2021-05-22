@@ -131,6 +131,10 @@ header .dropdown .dropdown-content {
     left: -50%;
 }
 
+.section__portfolio .poster-cont {
+    max-width: 450px;
+    width: 100%;
+}
 .section__portfolio .poster {
     max-width: 450px;
     width: 100%;
@@ -138,6 +142,9 @@ header .dropdown .dropdown-content {
     height: auto;
 }
 .section__portfolio .txt {
+}
+.section__portfolio .item {
+    justify-content: space-around;
 }
 .section__portfolio .vimeo-cont iframe {
     width: 100%;
