@@ -200,6 +200,10 @@ header .dropdown .dropdown-content {
     margin-right: auto;
 }
 
+.blog-list .art-prev {
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .section__resolve .lead-form {
         display: flex;
@@ -297,5 +301,9 @@ header .dropdown .dropdown-content {
         
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    .blog-list .art-prev {
+        max-width: 350px;
     }
 }
