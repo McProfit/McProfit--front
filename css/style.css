@@ -29,6 +29,13 @@ body {
   list-style: none;
 }
 
+.space-between {
+    justify-content: space-between;
+}
+.space-around {
+    justify-content: space-around;
+}
+
 .title__center {
   text-align: center;
 }
@@ -206,7 +213,16 @@ header .dropdown .dropdown-content {
     .section__resolve .lead-form .comment {
         width: 100%;
     }
-} 
+}
+
+.section__about .photo-cont {
+    max-width: 350px;
+    width: 100%;
+}
+.section__about .photo-cont .photo {
+    width: 100%;
+}
+
 @media (min-width: 1024px) {
     .section {
         position: relative;
