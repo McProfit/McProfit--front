@@ -53,9 +53,14 @@ img {
 .product__item__title {
   font-size: 18px;
 }
-.subtitle {
+.subtitle,
+.sidenav .sidenav-link {
     font-weight: 500;
     font-size: 16px;
+    line-height: 18px;
+}
+.sidenav [class*=neu-].sidenav-link {
+    margin: 10px 0;
 }
 
 a strong,
@@ -202,6 +207,37 @@ header .dropdown .dropdown-content {
 
 .blog-list .art-prev {
     width: 100%;
+}
+
+.sidenav {
+    max-width: 300px;
+    width: 100%;
+}
+.sidenav .sidenav-header .sidenav-trigger {
+    left: initial;
+    right: 0;
+}
+
+.header .sidenav-trigger {
+    display: inline-flex;
+    align-items: center;
+}
+.mobile-menu-icon-cont {            
+    cursor: pointer;
+    
+    width: 100%;
+    height: 30px;
+    
+    padding-top: 1px;
+}
+.mobile-menu-line-one,
+.mobile-menu-line-two,
+.mobile-menu-line-three {
+    width: 28px;
+    height: 4px;
+    background-color: #A84F46;
+    margin: 4px auto;
+    transition: 0.4s;
 }
 
 @media (min-width: 768px) {
