@@ -39,7 +39,7 @@
           <li><a href="/blog.html" class="navbar-link hide-sm-down  neu-flat rounded-1">Блог</a></li>
           <li><a href="/about.html" class="navbar-link hide-sm-down neu-flat rounded-1">О нас</a></li>
         </ul>
-        <p class="ml-auto sidenav-trigger btn circle hide-md-up neu-bordered">M</p>
+        <p data-target="mobiMenu" class="ml-auto sidenav-trigger btn circle hide-md-up neu-bordered sidenav-trigger">M</p>
       </nav>
     </header>
     <main>
@@ -189,7 +189,7 @@
         </div>
       </section>
     </main>
-    <footer id="footer" class="footer mt-5">
+      <footer id="footer" class="footer mt-5">
       <div class="container neu-flat rounded-2 p-3">
         <div class="d-flex fx-wrap">
           <a href="#" class="footer-logo-link mt-3"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/6089a9271d15a2c67c8cec6c_Trade%20Mark%20(web-head).svg" alt="" class="footer-image" /></a>
@@ -248,8 +248,23 @@
         </div>
         <div class="title__center mt-1"><strong>© 2021 McProfit</strong></div>
       </div>
-    </footer>
-    <div class="modal shadow-1 neu-flat rounded-3" id="thanq" data-ax="modal">
+      </footer>
+      <aside class="sidenav shadow-1 neu-flat" id="mobiMenu" data-ax="sidenav">
+        <div class="sidenav-header">
+          <button data-target="mobiMenu" class="sidenav-trigger">X</button>
+          <img class="sidenav-logo dropshadow-1" src="/img/harvest-profit-logo.svg" alt="Logo" />
+        </div>
+        <a href="#" class="sidenav-link btn rounded-1 neu-pressed neu-lighten">Главная</a>
+        <a href="#" class="sidenav-link btn rounded-1 neu-pressed neu-lighten">Блог</a>
+        <a href="#" class="sidenav-link btn rounded-1 neu-pressed neu-lighten">О нас</a>
+        <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten" href="/e-com.html">Разработка интернет-магазина</a>
+        <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten" href="/seo-audit.html">SEO аудит</a>
+        <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten" href="/conv-audit.html">Конверсионный аудит сайта</a>
+        <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten" href="/comp-anal.html">Анализ конкурентов</a>
+        <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten" href="/ad-audit.html">Аудит контекстной рекламы</a>
+        <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten" href="/system.html">Разработка системы клиентогенерации</a>
+      </aside>
+      <div class="modal shadow-1 neu-flat rounded-3" id="thanq" data-ax="modal">
       <div class="modal-header title">
         Вы на верном пути
         <button data-target="thanq" class="btn neu-flat modal-trigger">
