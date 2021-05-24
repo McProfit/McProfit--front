@@ -76,7 +76,10 @@ a strong,
   line-height: 23px;
 }
 .section .text-lead {
-  font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-weight: 400;
 }
 .section .text-lead .title,
 .section .text-lead strong {
@@ -117,6 +120,10 @@ a strong,
 .width-100 {
   width: 100%;
 }
+.width-m100 {
+    width: 100%;
+}
+
 .section__products .product__item__title,
 .section__products .product__item__bold {
   text-align: center;

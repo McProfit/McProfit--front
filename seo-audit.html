@@ -13,14 +13,14 @@
     <script src="https://cdn.jsdelivr.net/npm/neu-axentix@1.5.0/dist/js/neu-axentix.min.js"></script>
 </head>
 <body class="layout neu-light neu-bg-lighten">
-  <header id="nav" class="navbar-fixed neu-bg-darken">
+  <header id="nav" class="navbar-fixed neu-bg-darken header">
     <nav class="navbar neu-flat container">
       <a href="/index.html" class="navbar-brand logotype">McProfit</a>
       <a href="#" class="hide-sm-down navbar-logo centered">
         <img src="img/harvest-profit-logo.svg" width="35" height="35">
       </a>
-      <ul role="list" class="navbar-menu ml-auto lh-normal">
-        <li><a href="/" class="navbar-link hide-sm-down neu-flat rounded-1 active">Главная</a></li>
+      <ul role="list" class="navbar-menu ml-auto lh-normal hide-sm-down">
+        <li><a href="/" class="navbar-link neu-flat rounded-1 active">Главная</a></li>
         <li>
           <div class="dropdown" id="example-dropdown">
             <a type="button" class="navbar-link neu-flat rounded-1 dropdown-trigger">
@@ -36,10 +36,16 @@
             </div>
           </div>
         </li>
-        <li><a href="/blog.html" class="navbar-link hide-sm-down  neu-flat rounded-1">Блог</a></li>
-        <li><a href="/about.html" class="navbar-link hide-sm-down neu-flat rounded-1">О нас</a></li>
+        <li><a href="/blog.html" class="navbar-link neu-flat rounded-1">Блог</a></li>
+        <li><a href="/about.html" class="navbar-link neu-flat rounded-1">О нас</a></li>
       </ul>
-      <p class="ml-auto sidenav-trigger btn circle hide-md-up neu-bordered">M</p>
+      <div data-target="mobiMenu" id="mobMenu" class="ml-auto btn circle hide-md-up neu-bordered sidenav-trigger">
+        <div class="mobi-only mobile-menu-icon-cont">
+		  <div class="mobile-menu-line-one"></div>
+		  <div class="mobile-menu-line-two"></div>
+		  <div class="mobile-menu-line-three"></div>
+		</div>
+      </div>
     </nav>
   </header>
   <main>
@@ -241,6 +247,21 @@
         <div class="title__center mt-1"><strong>© 2021 McProfit</strong></div>
       </div>
     </footer>
+    <aside class="sidenav shadow-1 neu-flat pl-3 pr-3" id="mobiMenu" data-ax="sidenav">
+      <div class="sidenav-header">
+        <img class="sidenav-logo dropshadow-1" src="/img/harvest-profit-logo.svg" alt="Logo" />
+        <button data-target="mobiMenu" class="sidenav-trigger"><strong>X</strong></button>
+      </div>
+      <a href="/" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Главная</a>
+      <a href="/blog.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Блог</a>
+      <a href="/about.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">О нас</a>
+      <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/e-com.html">Разработка интернет-магазина</a>
+      <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/seo-audit.html">SEO аудит</a>
+      <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/conv-audit.html">Конверсионный аудит сайта</a>
+      <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/comp-anal.html">Анализ конкурентов</a>
+      <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/ad-audit.html">Аудит контекстной рекламы</a>
+      <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/system.html">Разработка системы клиентогенерации</a>
+    </aside>
   <script>
    let exampleDropdown = new Axentix.Dropdown('#example-dropdown');
    
