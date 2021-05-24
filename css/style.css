@@ -254,6 +254,11 @@ header .dropdown .dropdown-content {
     .section .text-lead {
         width: 62%;
     }
+
+    .main-section .container {
+        min-height: 300px;
+    }
+    
     .main__section .text-lead {
         align-self: center;
         
