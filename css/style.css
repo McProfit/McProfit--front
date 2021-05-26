@@ -242,7 +242,7 @@ header .dropdown .dropdown-content {
 .mobile-menu-line-three {
     width: 28px;
     height: 4px;
-    background-color: #A84F46;
+    background-color: #a09a8a;
     margin: 4px auto;
     transition: 0.4s;
 }
@@ -277,6 +277,13 @@ header .dropdown .dropdown-content {
     
     .section .image-cont {
         display: block;
+
+        display: flex;
+        justify-content: center;
+    }
+    .section .image-cont img {
+        width: 100%;
+        max-height: 250px;
     }
 
     
