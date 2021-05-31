@@ -54,7 +54,7 @@
         <div class="text-lead mt-3">
           <h1 class="title mb-2"><strong class="bold-text">Исследуем методы продвижения и продаж конкурентов по рынку</strong></h1>
           <h3 class="subtitle mt-0">Получите инсайты по продвижению бизнеса из анализа конкурентов -  сэкономите на "экспериментах"  </h3>
-          <a href="#" class="btn rounded-1 neu-flat mt-3"><strong>Обсудить задачу</strong></a>
+          <a onclick="GoToForm()" class="btn rounded-1 neu-flat mt-3"><strong>Обсудить задачу</strong></a>
         </div>
         <div class="image-cont vself-center mt-5 d-flex fx-center"><img src="img/duck/comp.svg" loading="lazy" height="400" alt="McProfit logotype" width="400" class="hero__logotype" /></div>
       </div>
@@ -101,37 +101,37 @@
     <section class="section section__lead_magnet mt-5">
       <div class="container neu-bordered rounded-2 p-3">
         <h2 class="title txt-center m-0 mt-3">Заполните форму ниже чтобы получить больше информации по своему случаю</h2>
-        <form class="lead-form">
+        <form id="leadForm" class="lead-form" onsubmit="return false;">
           <div class="form-field">
             <label for="name">Имя</label>
-            <input type="text" id="name" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1">
+            <input type="text" name="name" id="name" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
           </div>
           <div class="form-field">
             <label for="orgname">Название организации</label>
-            <input type="text" id="orgname" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1">
+            <input type="text" name="company" id="orgname" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
           </div>
           <div class="form-field">
             <label for="pos">Должность</label>
-            <input type="text" id="pos" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1">
+            <input type="text" name="position" id="pos" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
           </div>
           <div class="form-field">
             <label for="email"><strong>Рабочий</strong> Email</label>
-            <input type="email" id="email" class="form-control neu-flat rounded-1" placeholder="contact@example.com" />
+            <input type="email" name="email" id="email" class="form-control neu-flat rounded-1" placeholder="contact@example.com" data-rules='["required","email"]'>
           </div>
           <div class="form-field">
             <label for="phone">Телефон</label>
-            <input type="phone" id="phone" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1">
+            <input type="phone" name="phone" id="phone" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
           </div>
           <div class="form-field">
             <label for="site">Адрес сайта (если есть)</label>
-            <input type="text" id="site" class="form-control neu-flat rounded-1">
+            <input type="text" name="www" id="site" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
           </div>
-          <button class="btn rounded-1 neu-pressed neu-lighten mt-3 mb-2 send-button">Оставить заявку</buttton>
+          <button onclick="submitForm()" class="btn rounded-1 neu-pressed neu-lighten mt-3 mb-2 send-button">Оставить заявку</buttton>
         </form>
       </div>
     </section>
-      
-      <section class="section section__tools mt-5">
+    
+    <section class="section section__tools mt-5">
         <div class="container neu-bordered rounded-2 p-3">
         <h1 class="title no-margins title__center">В решении задач мы используем профессиональные инструменты</h1>
         <ul role="list" class="clear-list d-flex fx-wrap using-list">
@@ -144,11 +144,11 @@
         </ul>
       </div>
     </section>
-      </main>
-    <footer id="footer" class="footer mt-5">
+  </main>
+  <footer id="footer" class="footer mt-5">
       <div class="container neu-flat rounded-2 p-3">
         <div class="d-flex fx-wrap">
-          <a href="#" class="footer-logo-link mt-3"><img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/6089a9271d15a2c67c8cec6c_Trade%20Mark%20(web-head).svg" alt="" class="footer-image" /></a>
+          <a href="#" class="footer-logo-link mt-3"><img src="/img/duck/mcprofit-logo.svg" alt="" class="footer-image" /></a>
           <div class="margin mt-3">
             <h2 class="footer-heading">Услуги</h2>
             <ul role="list" class="clear-list">
@@ -205,10 +205,10 @@
         </div>
         <div class="title__center mt-1"><strong>© 2021 McProfit</strong></div>
       </div>
-    </footer>
-    <aside class="sidenav shadow-1 neu-flat pl-3 pr-3" id="mobiMenu" data-ax="sidenav">
+        </footer>
+  <aside class="sidenav shadow-1 neu-flat pl-3 pr-3" id="mobiMenu" data-ax="sidenav">
       <div class="sidenav-header">
-        <img class="sidenav-logo dropshadow-1" src="/img/harvest-profit-logo.svg" alt="Logo" />
+        <img class="sidenav-logo dropshadow-1" src="/img/duck/mcprofit-logo.svg" alt="Logo" />
         <button data-target="mobiMenu" class="sidenav-trigger"><strong>X</strong></button>
       </div>
       <a href="/" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Главная</a>
@@ -220,10 +220,94 @@
       <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/comp-anal.html">Анализ конкурентов</a>
       <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/ad-audit.html">Аудит контекстной рекламы</a>
       <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/system.html">Разработка системы клиентогенерации</a>
-    </aside>
+        </aside>
+  <div class="modal shadow-1 neu-flat rounded-3" id="thanq">
+    <div class="modal-header title">
+      Вы на верном пути
+      <button data-target="thanq" class="btn neu-flat modal-trigger">
+        X
+      </button>
+    </div>
+    <div class="modal-content">
+      <h4 class="title">Благодарим за обращение, мы свяжемся с вами в течении 30 минут чтобы назначить время консультации.</h4>
+    </div>
+    <div class="modal-footer">
+      <button class="btn neu-flat rounded-2 modal-trigger width-100" data-target="thanq">Хорошо</button>
+    </div>
+  </div>
+  <div class="modal shadow-1 neu-flat rounded-3" id="fail">
+    <div class="modal-header title">
+      Произошла ошибка
+      <button data-target="fail" class="btn neu-flat modal-trigger">
+        X
+      </button>
+    </div>
+    <div class="modal-content">
+      <h4 class="title">При попытке отправки формы произошла ошибка, попробуйте отправить запрос позже или свяжитесь с нами одним из способов ниже</h4>
+      <ul role="list" class="clear-list">
+        <li class="mt-2"><p class="txt">Телефон:</p><a href="tel://+375257764484" class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a></li>
+        <li class="mt-2"><p class="txt" lang="en">Viber:</p><a href="viber://add?number=+375257764484" class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a></li>
+        <li class="mt-2"><p class="txt" lang="en">Telegram:</p><a href="#" class="rounded-1 neu-pressed p-2 footer-link">@lexsalesmam</a></li>
+        <li class="mt-2"><p class="txt" lang="en">E-mail:</p><a href="mailto://info@mcprofit.biz" class="rounded-1 neu-pressed p-2 footer-link">info@mcprofit.biz</a></li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button class="btn neu-flat rounded-2 modal-trigger width-100" data-target="fail">Хорошо</button>
+    </div>
+  </div>
   <script>
-   let exampleDropdown = new Axentix.Dropdown('#example-dropdown');
-   
+   function GoToForm() {
+     document.getElementById("leadForm").scrollIntoView({
+       behavior: 'smooth',
+       block: 'start'
+     });
+   }
+
+   let thanq = new Axentix.Modal('#thanq');
+   let fail = new Axentix.Modal('#fail');
+
+   function submitForm() { 
+
+     let form = document.getElementById('leadForm');
+
+     // This is a nice way of getting a list of checkable input elements
+     // And converting them into an array so we can use map/filter/reduce functions:
+     let inputs = [...form.querySelectorAll("input[data-rules]")];
+
+     let valid = true;
+     
+     inputs.map((input) => {
+       if (Iodine.is(input.value, JSON.parse(input.dataset.rules)) !== true) {
+         input.classList.add("invalid");
+         valid = false;
+       }
+     });
+
+     if (valid) {
+       fetch('http://localhost:3000/lead_comp_anal', {
+		 method: 'POST',
+		 body: JSON.stringify(Object.fromEntries(new FormData(form))),
+		 headers: {
+		   'Content-type': 'application/json; charset=UTF-8'
+		 }
+	   }).then(function (response) {
+         if (response.ok) {
+           thanq.open();
+           
+		   return response.json();
+		 }
+
+         fail.open();
+         
+		 return Promise.reject(response);
+	   }).then(function (data) {
+		 console.log(data);
+	   }).catch(function (error) {
+		 console.warn(error);
+	   });
+     }
+   }
   </script>
+    <script src="https://cdn.jsdelivr.net/gh/mattkingshott/iodine@3/dist/iodine.min.js" defer></script>
 </body>
 </html>

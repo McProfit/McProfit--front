@@ -53,7 +53,7 @@
         <div class="d-flex fx-wrap container">
           <div class="text-lead mt-3">
             <h1 class="title"><strong class="bold-text">Мы разрабатываем и внедряем системы комплексного интернет-маркетинга и интернет торговли в Минске и Беларуси для малого и микро-бизнеса</strong></h1>
-            <a href="#" class="btn rounded-1 neu-flat mt-3"><strong>Обсудить задачи</strong></a>
+            <a onclick="GoToForm()" class="btn rounded-1 neu-flat mt-3"><strong>Обсудить задачи</strong></a>
           </div>
           <div class="image-cont vself-center mt-5 d-flex fx-center"><img src="/img/duck/mcprofit-logo.svg" loading="lazy" height="400" alt="McProfit logotype" width="400" class="hero__logotype" /></div>
         </div>
@@ -132,47 +132,51 @@
           <img src="https://uploads-ssl.webflow.com/6089a0eaae053acfedd5987f/608abe1f49e5b47235f2796b_target.svg" loading="lazy" alt="" class="img-poster" />
         </div>
         <div class="container neu-bordered rounded-2 p-3 mt-5">
-          <form class="lead-form">
+          <form id="leadForm" class="lead-form" onsubmit="return false;">
             <div class="form-field">
               <label for="name">Имя</label>
-              <input type="text" id="name" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1">
+              <input name="name" type="text" id="name" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
             </div>
             <div class="form-field">
               <label for="orgname">Название организации</label>
-              <input type="text" id="orgname" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1">
+              <input name="company" type="text" id="orgname" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
             </div>
             <div class="form-field">
               <label for="pos">Должность</label>
-              <input type="text" id="pos" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1">
+              <input name="position" type="text" id="pos" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
             </div>
             <div class="form-field">
               <label for="email"><strong>Рабочий</strong> Email</label>
-              <input type="email" id="email" class="form-control neu-flat rounded-1" placeholder="contact@example.com" />
+              <input name="email" type="email" id="email" class="form-control neu-flat rounded-1" placeholder="contact@example.com" data-rules='["required","email"]'>
+            </div>
+            <div class="form-field" style="width: 100%;">
+              <label for="phone">Контактный телефон</label>
+              <input name="phone" type="phone" id="phone" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
             </div>
             <div class="form-field prod-sel">
               <label>Вас интересует</label>
               <label class="form-check m-2">
-                <input type="radio" name="product" />
+                <input type="radio" name="application_subtype" value="1">
                 <span>Продвижение бизнеса</span>
               </label>
               <label class="form-check m-2">
-                <input type="radio" name="product" />
+                <input type="radio" name="application_subtype" value="2" checked>
                 <span>Интернет-магазин</span>
               </label>
               <label class="form-check m-2">
-                <input type="radio" name="product" />
+                <input type="radio" name="application_subtype" value="3">
                 <span>Аудит</span>
               </label>
               <label class="form-check m-2">
-                <input type="radio" name="product" />
+                <input type="radio" name="application_subtype" value="4">
                 <span>Нужен сайт</span>
               </label>
             </div>
             <div class="form-field comment">
               <label for="textarea">Проясните какие вопросы вас интересуют</label>
-              <textarea id="textarea" class="form-control neu-flat rounded-1" data-neu-focus="neu-pressed"></textarea>
+              <textarea name="comment" id="textarea" class="form-control neu-flat rounded-1" data-neu-focus="neu-pressed"></textarea>
             </div>
-            <button class="btn rounded-1 neu-pressed neu-lighten mt-3 mb-2 send-button primary press modal-trigger" data-target="thanq">Записаться</buttton>
+            <button class="btn rounded-1 neu-pressed neu-lighten mt-3 mb-2 send-button primary press" onclick="mySubmitFunction()">Записаться</buttton>
           </form>
         </div>
       </section>
@@ -271,7 +275,7 @@
       <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/ad-audit.html">Аудит контекстной рекламы</a>
       <a class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100" href="/system.html">Разработка системы клиентогенерации</a>
     </aside>
-    <div class="modal shadow-1 neu-flat rounded-3" id="thanq" data-ax="modal">
+    <div class="modal shadow-1 neu-flat rounded-3" id="thanq">
       <div class="modal-header title">
         Вы на верном пути
         <button data-target="thanq" class="btn neu-flat modal-trigger">
@@ -285,25 +289,79 @@
         <button class="btn neu-flat rounded-2 modal-trigger width-100" data-target="thanq">Хорошо</button>
       </div>
     </div>
+    <div class="modal shadow-1 neu-flat rounded-3" id="fail">
+      <div class="modal-header title">
+        Произошла ошибка
+        <button data-target="fail" class="btn neu-flat modal-trigger">
+          X
+        </button>
+      </div>
+      <div class="modal-content">
+        <h4 class="title">При попытке отправки формы произошла ошибка, попробуйте отправить запрос позже или свяжитесь с нами одним из способов ниже</h4>
+        <ul role="list" class="clear-list">
+          <li class="mt-2"><p class="txt">Телефон:</p><a href="tel://+375257764484" class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a></li>
+          <li class="mt-2"><p class="txt" lang="en">Viber:</p><a href="viber://add?number=+375257764484" class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a></li>
+          <li class="mt-2"><p class="txt" lang="en">Telegram:</p><a href="#" class="rounded-1 neu-pressed p-2 footer-link">@lexsalesmam</a></li>
+          <li class="mt-2"><p class="txt" lang="en">E-mail:</p><a href="mailto://info@mcprofit.biz" class="rounded-1 neu-pressed p-2 footer-link">info@mcprofit.biz</a></li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn neu-flat rounded-2 modal-trigger width-100" data-target="fail">Хорошо</button>
+      </div>
+    </div>
     <script>
-     let exampleDropdown = new Axentix.Dropdown('#example-dropdown');
-     
-    </script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js" async></script>
-    <!-- Yandex.Metrika counter -->
-    <script defer type="text/javascript">
-     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+     function GoToForm() {
+       document.getElementById("leadForm").scrollIntoView({
+         behavior: 'smooth',
+         block: 'start'
+       });
+     }
 
-     ym(79471306, "init", {
-       clickmap:true,
-       trackLinks:true,
-       accurateTrackBounce:true,
-       webvisor:true
-     });
+     let thanq = new Axentix.Modal('#thanq');
+     let fail = new Axentix.Modal('#fail');
+
+     function mySubmitFunction() { 
+
+       let form = document.getElementById('leadForm');
+
+       // This is a nice way of getting a list of checkable input elements
+       // And converting them into an array so we can use map/filter/reduce functions:
+       let inputs = [...form.querySelectorAll("input[data-rules]")];
+
+       let valid = true;
+       
+       inputs.map((input) => {
+         if (Iodine.is(input.value, JSON.parse(input.dataset.rules)) !== true) {
+           input.classList.add("invalid");
+           valid = false;
+         }
+       });
+
+       if (valid) {
+         fetch('http://localhost:3000/lead_mainpage', {
+		   method: 'POST',
+		   body: JSON.stringify(Object.fromEntries(new FormData(form))),
+		   headers: {
+		     'Content-type': 'application/json; charset=UTF-8'
+		   }
+	     }).then(function (response) {
+           if (response.ok) {
+             thanq.open();
+             
+		     return response.json();
+		   }
+
+           fail.open();
+           
+		   return Promise.reject(response);
+	     }).then(function (data) {
+		   console.log(data);
+	     }).catch(function (error) {
+		   console.warn(error);
+	     });
+       }
+     }
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/79471306" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+    <script src="https://cdn.jsdelivr.net/gh/mattkingshott/iodine@3/dist/iodine.min.js" defer></script>
 </body>
 </html>
