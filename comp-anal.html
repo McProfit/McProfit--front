@@ -281,7 +281,7 @@
        });
 
        if (valid) {
-         fetch('https://api.mcprofit.biz/lead_comp_anal', {
+         fetch('https://api.mcprofit.biz/rpc/add_lfs_comp_anal', {
 		   method: 'POST',
 		   body: JSON.stringify(Object.fromEntries(new FormData(form))),
 		   headers: {

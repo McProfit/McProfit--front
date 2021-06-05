@@ -355,7 +355,7 @@
        });
 
        if (valid) {
-         fetch('https://api.mcprofit.biz/lead_sys', {
+         fetch('https://api.mcprofit.biz/rpc/add_lfs_sys', {
 		   method: 'POST',
 		   body: JSON.stringify(Object.fromEntries(new FormData(form))),
 		   headers: {

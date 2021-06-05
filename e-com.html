@@ -544,7 +544,7 @@
        });
 
        if (valid) {
-         fetch('https://api.mcprofit.biz/lead_ecom_general', {
+         fetch('https://api.mcprofit.biz/rpc/add_lfs_ecom_general', {
 		   method: 'POST',
 		   body: JSON.stringify(Object.fromEntries(new FormData(form))),
 		   headers: {
@@ -586,10 +586,9 @@
        });
 
        if (valid) {
-         fetch('http://api.mcprofit.biz/lead_ecom_micro', {
+         fetch('https://api.mcprofit.biz/rpc/add_lfs_ecom_micro', {
 		   method: 'POST',
-		   body: JSON.string
-ify(Object.fromEntries(new FormData(form))),
+		   body: JSON.stringify(Object.fromEntries(new FormData(form))),
 		   headers: {
 		     'Content-type': 'application/json; charset=UTF-8'
 		   }
@@ -629,7 +628,7 @@ ify(Object.fromEntries(new FormData(form))),
        });
 
        if (valid) {
-         fetch('http://api.mcprofit.biz/lead_ecom_fast', {
+         fetch('https://api.mcprofit.biz/rpc/add_lfs_ecom_fast', {
 		   method: 'POST',
 		   body: JSON.stringify(Object.fromEntries(new FormData(form))),
 		   headers: {
@@ -671,7 +670,7 @@ ify(Object.fromEntries(new FormData(form))),
        });
 
        if (valid) {
-         fetch('http://api.mcprofit.biz/lead_ecom_custom', {
+         fetch('https://api.mcprofit.biz/rpc/add_lfs_ecom_custom', {
 		   method: 'POST',
 		   body: JSON.stringify(Object.fromEntries(new FormData(form))),
 		   headers: {
