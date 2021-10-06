@@ -314,6 +314,24 @@ a strong,
   background-color: rgba(0, 0, 0, 0.15);
 }
 
+.blog-read .title {
+  font-size: 20px;
+}
+
+.blog-article {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.blog-article .author {
+  max-width: 300px;
+  width: 100%;
+}
+
+.blog-article .art-info {
+  flex-wrap: wrap;
+}
+
 @media (min-width: 768px) {
   .section__resolve .lead-form {
     display: flex;
@@ -430,7 +448,8 @@ a strong,
 
 @media (max-width: 720px) {
   .portfolio main.container.p-3, 
-  .blog main.container.p-3 {
+  .blog main.container.p-3,
+  .blog-read main.container.p-3  {
     padding: 0 !important;
   }
 }
