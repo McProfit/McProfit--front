@@ -316,6 +316,7 @@ a strong,
 
 .blog-read .title {
   font-size: 20px;
+  line-height: 25px;
 }
 
 .blog-article {
@@ -451,6 +452,10 @@ a strong,
   .blog main.container.p-3,
   .blog-read main.container.p-3  {
     padding: 0 !important;
+  }
+  .blog-read .title {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 @media screen and (max-width: 599px) {
