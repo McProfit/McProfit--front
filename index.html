@@ -31,8 +31,8 @@
     <!--  -->
     <script type="application/ld+json">
      {
-       "@context": "https://schema.org/", 
-       "@type": "Product", 
+       "@context": "https://schema.org/",
+       "@type": "Product",
        "name": "Разработка интернет-магазина под ключ",
        "image": "https://mcprofit.biz/img/duck/e-com.svg",
        "description": "Разрабатываем интернет-магазины с наполнением, интеграцией, стратегией продвижения и комплексной аналитикой",
@@ -64,16 +64,26 @@
         </a>
         <ul role="list" class="navbar-menu ml-auto lh-normal hide-sm-down">
           <li><a href="/" class="navbar-link neu-flat rounded-1 active">Главная</a></li>
-          <li><a href="/blog.html" class="navbar-link neu-flat rounded-1">Блог</a></li>
-          <li><a href="/#contacts" class="navbar-link neu-flat rounded-1">Контакты</a></li>
+          <li>
+            <div class="dropdown" id="menudd">
+              <a type="button" class="navbar-link neu-flat rounded-1 dropdown-trigger">
+                Материалы
+              </a>
+              <div class="dropdown-content neu-bg-light neu-bordered mt-2">
+                <a class="dropdown-item" href="/blog.html">Блог</a>
+                <a class="dropdown-item" href="https://db.mcprofit.biz">База знаний</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="/our-works.html" class="navbar-link neu-flat rounded-1">Портфолио</a></li>
           <li><a href="/about.html" class="navbar-link neu-flat rounded-1">О нас</a></li>
         </ul>
         <div data-target="mobiMenu" id="mobMenu" class="ml-auto btn circle hide-md-up neu-bordered sidenav-trigger">
           <div class="mobi-only mobile-menu-icon-cont">
-		    <div class="mobile-menu-line-one"></div>
-		    <div class="mobile-menu-line-two"></div>
-		    <div class="mobile-menu-line-three"></div>
-		  </div>
+            <div class="mobile-menu-line-one"></div>
+            <div class="mobile-menu-line-two"></div>
+            <div class="mobile-menu-line-three"></div>
+          </div>
         </div>
       </nav>
     </header>
@@ -285,14 +295,20 @@
         <div class="d-flex fx-wrap">
           <a href="/index.html" class="footer-logo-link mt-3"><img src="/img/duck/mcprofit-logo.svg" alt="" class="footer-image"></a>
           <div class="margin mt-3">
+            <h2 class="footer-heading">Материалы</h2>
+            <ul role="list" class="clear-list">
+              <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/blog.html" class="footer-link">Блог</a></li>
+              <li class="rounded-1 neu-pressed p-2 mt-3"><a href="https://db.mcprofit.biz" class="footer-link">База знаний</a></li>
+            </ul>
+          </div>
+          <div class="margin mt-3">
             <h2 class="footer-heading">Навигация</h2>
             <ul role="list" class="clear-list">
               <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/" class="footer-link">Главная</a></li>
-              <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/blog.html" class="footer-link">Блог</a></li>
               <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/about.html" class="footer-link">О нас</a></li>
               <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/privacy-policy.html" class="footer-link">Политика конфиденциальности</a></li>
             </ul>
-          </div>    
+          </div>
           <div class="margin mt-3">
             <h2 id="contacts" class="footer-heading">Контакты</h2>
             <p class="subtitle">Время работы: пн-пт 6:45 - 17:30</p>
@@ -332,6 +348,8 @@
       </div>
       <a href="/" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Главная</a>
       <a href="/blog.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Блог</a>
+      <a href="https://db.mcprofit.biz" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">База знаний</a>
+      <a href="/our-works.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Наши работы</a>
       <a href="/about.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">О нас</a>
     </aside>
 
@@ -369,8 +387,10 @@
         <button class="btn neu-flat rounded-2 modal-trigger width-100" data-target="fail">Хорошо</button>
       </div>
     </div>
-    
+
     <script>
+     let MenuDown = new Axentix.Dropdown('#menudd');
+
      function GoToForm() {
        document.getElementById("leadForm").scrollIntoView({
          behavior: 'smooth',
@@ -381,7 +401,7 @@
      let thanq = new Axentix.Modal('#thanq');
      let fail = new Axentix.Modal('#fail');
 
-     function submitForm() { 
+     function submitForm() {
 
        let form = document.getElementById('leadForm');
 
@@ -390,7 +410,7 @@
        let inputs = [...form.querySelectorAll("input[data-rules]")];
 
        let valid = true;
-       
+
        inputs.map((input) => {
          if (Iodine.is(input.value, JSON.parse(input.dataset.rules)) !== true) {
            input.classList.add("invalid");
@@ -408,12 +428,12 @@
 	     }).then(function (response) {
            if (response.ok) {
              thanq.open();
-             
+
 		     return response.json();
 		   }
 
            fail.open();
-           
+
 		   return Promise.reject(response);
 	     }).then(function (data) {
 		   console.log(data);
