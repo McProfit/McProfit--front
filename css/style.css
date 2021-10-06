@@ -429,7 +429,8 @@ a strong,
 }
 
 @media (max-width: 720px) {
-  .portfolio main.container.p-3 {
+  .portfolio main.container.p-3, 
+  .blog main.container.p-3 {
     padding: 0 !important;
   }
 }
