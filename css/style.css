@@ -333,6 +333,17 @@ a strong,
   flex-wrap: wrap;
 }
 
+.section__openecom .clear-list {
+  justify-content: space-around;
+}
+.section__openecom .openecom__item {
+  width: 100%;
+}
+.section__openecom .clear-list b {
+  font-weight: 500;
+}
+
+
 @media (min-width: 768px) {
   .section__resolve .lead-form {
     display: flex;
@@ -345,6 +356,10 @@ a strong,
   .section__resolve .lead-form .prod-sel,
   .section__resolve .lead-form .comment {
     width: 100%;
+  }
+
+  .section__openecom .openecom__item {
+    max-width: 210px;
   }
 }
 
