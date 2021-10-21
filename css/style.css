@@ -67,6 +67,10 @@ body {
   font-size: 17px;
 }
 
+.container {
+  width: 85%;
+}
+
 .clear-list {
   padding-left: 0;
 
