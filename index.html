@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>Разработка интернет-магазина под ключ - McProfit (МакПрофит)</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.2.1/dist/css/axentix.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neu-axentix@1.5.0/dist/css/neu-axentix.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Axentix & Neu-Axentix JS minified version -->
-    <script src="https://cdn.jsdelivr.net/npm/axentix@1.2.1/dist/js/axentix.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/neu-axentix@1.5.0/dist/js/neu-axentix.min.js"></script>
-    <meta name="description" content="Разрабатываем интернет-магазины с наполнением, интеграцией, стратегией продвижения и комплексной аналитикой">
-    <!-- OG для Фейсбука, Вконтакта, Одноклассников и Гуглплюса -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="McProfit: Разработка систем E-commerce">
-    <meta property="og:title" content="McProfit: Разработка систем E-commerce">
-    <meta property="og:description" content="Разрабатываем интернет-магазины с наполнением, интеграцией, стратегией продвижения и комплексной аналитикой">
-    <meta property="og:url" content="https://mcprofit.biz/">
-    <meta property="og:locale" content="ru_RU">
-    <meta property="og:image" content="https://mcprofit.biz/img/vcard.png">
-    <meta property="og:image:width" content="968">
-    <meta property="og:image:height" content="504">
-    <!-- OG для твиттера -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="McProfit: Разработка систем E-commerce">
-    <meta name="twitter:description" content="Разрабатываем интернет-магазины с наполнением, интеграцией, стратегией продвижения и комплексной аналитикой">
-    <meta name="twitter:image:src" content="https://mcprofit.biz/img/vcard.png">
-    <meta name="twitter:url" content="https://mcprofit.biz/">
-    <meta name="twitter:domain" content="mcprofit.biz">
-    <!--  -->
-    <script type="application/ld+json">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Разработка интернет-магазина под ключ - McProfit (МакПрофит)</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.2.1/dist/css/axentix.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neu-axentix@1.5.0/dist/css/neu-axentix.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Axentix & Neu-Axentix JS minified version -->
+  <script src="https://cdn.jsdelivr.net/npm/axentix@1.2.1/dist/js/axentix.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/neu-axentix@1.5.0/dist/js/neu-axentix.min.js"></script>
+  <meta name="description"
+    content="Разрабатываем интернет-магазины с наполнением, интеграцией, стратегией продвижения и комплексной аналитикой">
+  <!-- OG для Фейсбука, Вконтакта, Одноклассников и Гуглплюса -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="McProfit: Разработка систем E-commerce">
+  <meta property="og:title" content="McProfit: Разработка систем E-commerce">
+  <meta property="og:description"
+    content="Разрабатываем интернет-магазины с наполнением, интеграцией, стратегией продвижения и комплексной аналитикой">
+  <meta property="og:url" content="https://mcprofit.biz/">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="https://mcprofit.biz/img/vcard.png">
+  <meta property="og:image:width" content="968">
+  <meta property="og:image:height" content="504">
+  <!-- OG для твиттера -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="McProfit: Разработка систем E-commerce">
+  <meta name="twitter:description"
+    content="Разрабатываем интернет-магазины с наполнением, интеграцией, стратегией продвижения и комплексной аналитикой">
+  <meta name="twitter:image:src" content="https://mcprofit.biz/img/vcard.png">
+  <meta name="twitter:url" content="https://mcprofit.biz/">
+  <meta name="twitter:domain" content="mcprofit.biz">
+  <!--  -->
+  <script type="application/ld+json">
      {
        "@context": "https://schema.org/",
        "@type": "Product",
@@ -52,465 +56,549 @@
        }
      }
     </script>
-    <!--  -->
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  </head>
-  <body class="layout neu-light neu-bg-lighten">
-    <header id="nav" class="navbar-fixed neu-bg-darken header">
-      <nav class="navbar neu-flat container">
-        <a href="/index.html" class="navbar-brand logotype">McProfit</a>
-        <a href="#" class="hide-sm-down navbar-logo centered">
-          <img src="/img/duck/mcprofit-logo.svg" width="35" height="35">
-        </a>
-        <ul role="list" class="navbar-menu ml-auto lh-normal hide-sm-down">
-          <li><a href="/" class="navbar-link neu-flat rounded-1 active">Главная</a></li>
-          <li>
-            <div class="dropdown" id="menudd">
-              <a type="button" class="navbar-link neu-flat rounded-1 dropdown-trigger">
-                Материалы
-              </a>
-              <div class="dropdown-content neu-bg-light neu-bordered mt-2">
-                <a class="dropdown-item" href="/blog.html">Блог</a>
-                <a class="dropdown-item" target="_blank" href="https://db.mcprofit.biz">База знаний</a>
-              </div>
+  <!--  -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body class="layout neu-light neu-bg-lighten">
+  <header id="nav" class="navbar-fixed neu-bg-darken header">
+    <nav class="navbar neu-flat container">
+      <a href="/index.html" class="navbar-brand logotype">McProfit</a>
+      <a href="#" class="hide-sm-down navbar-logo centered">
+        <img src="/img/duck/mcprofit-logo.svg" width="35" height="35">
+      </a>
+      <ul role="list" class="navbar-menu ml-auto lh-normal hide-sm-down">
+        <li><a href="/" class="navbar-link neu-flat rounded-1 active">Главная</a></li>
+        <li>
+          <div class="dropdown" id="menudd">
+            <a type="button" class="navbar-link neu-flat rounded-1 dropdown-trigger">
+              Материалы
+            </a>
+            <div class="dropdown-content neu-bg-light neu-bordered mt-2">
+              <a class="dropdown-item" href="/blog.html">Блог</a>
+              <a class="dropdown-item" target="_blank" href="https://db.mcprofit.biz">База знаний</a>
             </div>
+          </div>
+        </li>
+        <li><a href="/our-works.html" class="navbar-link neu-flat rounded-1">Портфолио</a></li>
+        <li><a href="/about.html" class="navbar-link neu-flat rounded-1">О нас</a></li>
+      </ul>
+      <div data-target="mobiMenu" id="mobMenu" class="ml-auto btn circle hide-md-up neu-bordered sidenav-trigger">
+        <div class="mobi-only mobile-menu-icon-cont">
+          <div class="mobile-menu-line-one"></div>
+          <div class="mobile-menu-line-two"></div>
+          <div class="mobile-menu-line-three"></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container p-3">
+    <section class="section main__section">
+      <div class="d-flex fx-wrap container">
+        <div class="text-lead mt-3">
+          <h1 class="title mb-2"><strong class="bold-text">Разрабатываем интернет-магазины с наполнением, интеграцией,
+              стратегией продвижения и комплексной аналитикой</strong></h1>
+          <h3 class="subtitle mt-0">Работаем со всеми странами СНГ</h3>
+          <a onclick="GoToForm()" class="btn rounded-1 neu-flat mt-3"><strong>Обсудить разработку</strong></a>
+        </div>
+        <div class="image-cont vself-center mt-5 d-flex fx-center"><img src="/img/duck/e-com.svg" loading="lazy"
+            height="400" alt="McProfit logotype" width="400" class="hero__logotype" /></div>
+      </div>
+    </section>
+    <section class="section section__advantages mt-5">
+      <div class="d-flex fx-wrap container">
+        <div class="text-lead neu-bordered rounded-2 p-3" style="order:2;">
+          <h2 class="title title__center">Наши ключевые отличия</h2>
+          <ul role="list" class="mt-2 pl-4">
+            <li class="advantages__item m-2">Строим полноценную систему: интернет-магазин + наполнение + стратегия
+              продвижения + внутренняя кухня</li>
+            <li class="advantages__item m-2">Внедрям полноценную аналитику и отчётность</li>
+            <li class="advantages__item m-2">Используем маркетинговый подход на всех этапах работы</li>
+            <li class="advantages__item m-2">Ведём диалог на доступном языке</li>
+          </ul>
+        </div>
+        <div class="image-cont m-4" style="order:1;"><img src="/img/duck/seo.svg" loading="lazy" alt="" class="image" />
+        </div>
+      </div>
+    </section>
+    <section class="section section__advantages mt-5">
+      <div class="d-flex fx-wrap container">
+        <div class="text-lead neu-bordered rounded-2 p-3" style="order:1;">
+          <h2 class="title title__center">Вы наш идеальный клиент, если:</h2>
+          <ul role="list" class="mt-2 pl-4">
+            <li class="advantages__item m-2">У Вас есть представление что происходит в Вашем бизнесе</li>
+            <li class="advantages__item m-2">Вы ежегодно планируете и выделяете бюджет на продвижение и развитие</li>
+            <li class="advantages__item m-2">У Вас есть оффлайн торговая точка</li>
+            <li class="advantages__item m-2">Ваши товары востребованы и качественны</li>
+            <li class="advantages__item m-2">У Вас есть план по развитию бизнеса, и это не "та самая бумажка для
+              галочки"</li>
+          </ul>
+          <h3 class="title title__center">Вы наш клиент, даже если:</h3>
+          <ul role="list" class="mt-2 pl-4">
+            <li class="advantages__item m-2">У Вас большой разнородный ассортимент</li>
+            <li class="advantages__item m-2">Большое количество видов товара (больше 10 000шт)</li>
+          </ul>
+        </div>
+        <div class="image-cont m-4" style="order:2;"><img src="/img/duck/comp.svg" loading="lazy" alt=""
+            class="image" /></div>
+      </div>
+    </section>
+    <!-- Место для лидмагнита -->
+    <section class="section section__resolve mt-5">
+      <div class="container neu-flat rounded-2 p-3 d-flex fx-col fx-center">
+        <h2 class="title title__center">Система Электронной Коммерции</h2>
+        <p class="">Мы не делаем интернет-магазины под ключ — мы разрабатываем полноценные системы электронной
+          коммерции. В чём отличие такого подхода, сейчас покажем.<br> На рисунке ниже представлена технология продажи,
+          точнее её "внешняя часть" — внутренний маркетинг сайта, а так же механику бизнеса здесь опускаем.</p>
+        <img src="/img/decore/site-system.svg" alt="система интернет-маркетинга для интернет-магазина"
+          class="rounded-1 poster-decore" loading="lazy">
+        <p class="image-note">Технология состоит из внутренней структуры сайта — каким образом страницы будут перемещать
+          посетителя и из внешней: источники посещения, рекламные системы, контент-маркетинг и других элементов.
+          Технология проектируется под каждый проект индивидуально, исходя из бизнес-процесса и проведённой аналитики.
+        </p>
+        <p class="">Технология превращается в систему когда все элементы работают как шестерни в механизме, когда все
+          инструменты маркетинга "работают сообща" на достижение цели — пополнение бюджета компании.</p>
+        <a onclick="GoToForm()" class="btn rounded-1 neu-pressed neu-lighten mt-3 mb-2 center">Получите больше
+          информации</a>
+      </div>
+    </section>
+    <!-- Место для лидмагнита -->
+    <section class="section section__resolve mt-5">
+      <div class="container neu-flat rounded-2 p-3 d-flex fx-col fx-center">
+        <h2 class="title title__center">Проектирование вместо шаблона</h2>
+        <p class="">Бесконечные переделки, правки, поиск фрилансеров... — всё это последствия наобум созданного сайта:
+          то не хватает раздела, то функционал не работает, а то и вовсе — посетители есть, а покупок нет. И самое
+          страшное в такой ситуации — никто не скажет почему?...</p>
+        <p class="">В итоге уходят деньги, издержки растут, а продажи через онлайн стоят на месте.</p>
+        <p>Мы держимся иного подхода, в самом деле никто ведь не станет строить небоскрёб без предварительных инженерных
+          расчётов — проектирования! Но когда речь заходит о бизнес-инструменте, а интернет-магазин больше чем
+          инструмент - это целая система, — о проектировании напрочь забывают. При том что на стадии проектирования
+          найти и исправить ошибки быстрее и дешевле!</p>
+        <br>
+        <p>Для создания правильной, продающей структуры сайта мы делаем:</p>
+        <ul role="list" class="clear-list  mt-2">
+          <li class="advantages__item m-2">
+            <p class="neu-bordered rounded-2 p-3 width-100">Погружение в Ваш бизнес и бизнес-процессы</p>
+            <p class="txt">В самом деле есть разница в проектировании интернет-магазина для бизнеса с оффлайн-торговлей
+              и в случае когда интернет-магазин самостоятельный бизнес.</p>
           </li>
-          <li><a href="/our-works.html" class="navbar-link neu-flat rounded-1">Портфолио</a></li>
-          <li><a href="/about.html" class="navbar-link neu-flat rounded-1">О нас</a></li>
+          <li class="advantages__item m-2">
+            <p class="neu-bordered rounded-2 p-3 width-100">Внимательно и полностью выслушиваем всё Ваше видение
+              магазина</p>
+            <p class="txt"></p>
+          </li>
+          <li class="advantages__item m-2">
+            <p class="neu-bordered rounded-2 p-3 width-100">Исследуем целевую аудиторию</p>
+            <p class="txt">Критерии выбора, задачи связанные с интернет-магазином, проблемы на пути к покупке.</p>
+          </li>
+          <li class="advantages__item m-2">
+            <p class="neu-bordered rounded-2 p-3 width-100">Анализируем рынок и конкурентов</p>
+            <p class="txt"></p>
+          </li>
+          <li class="advantages__item m-2">
+            <p class="neu-bordered rounded-2 p-3 width-100">Закладываем в интерфейс маркетинговые цепочки — сайт ведёт
+              посетителя к покупке</p>
+            <p class="txt"></p>
+          </li>
+          <li class="advantages__item m-2">
+            <p class="neu-bordered rounded-2 p-3 width-100">Учитываем "точки входа" посетителя на сайт и методы
+              продвижения при разработке структуры сайта</p>
+            <p class="txt"></p>
+          </li>
+          <li class="advantages__item m-2">
+            <p class="neu-bordered rounded-2 p-3 width-100">Ориентируемся на лучшие механики UX-проектирования</p>
+            <p class="txt"></p>
+          </li>
+          <li class="advantages__item m-2">
+            <p class="neu-bordered rounded-2 p-3 width-100">Создаём динамический прототип магазина и тестируем его на
+              реальных людях</p>
+            <p class="txt"></p>
+          </li>
         </ul>
-        <div data-target="mobiMenu" id="mobMenu" class="ml-auto btn circle hide-md-up neu-bordered sidenav-trigger">
-          <div class="mobi-only mobile-menu-icon-cont">
-            <div class="mobile-menu-line-one"></div>
-            <div class="mobile-menu-line-two"></div>
-            <div class="mobile-menu-line-three"></div>
-          </div>
+        <a onclick="GoToForm()" class="btn rounded-1 neu-pressed neu-lighten mt-3 mb-2 center">Обсудить разработку</a>
+      </div>
+    </section>
+    <!-- Место для лидмагнита -->
+    <section class="section section__advantages mt-5">
+      <div class="d-flex fx-wrap container">
+        <div class="text-lead neu-bordered rounded-2 p-3" style="order:1;">
+          <h2 class="title title__center">Что делать первым: маркетинг или интернет-магазин?</h2>
+          <p class="">Ещё одна головная боль предпринимателя — продвижение. Ведь даже идеально построенный с позиции
+            маркетинга интернет-магазин будет совершенно бесполезен без посетителей. Надеяться на чудо, что они сами
+            придут — не стоит.</p>
+          <p class="">Мы строим полноценную систему электронной коммерции, в которой всё учтено, поэтому разработка
+            маркетинговой стратегии идёт ещё на этапе проектирования. Ведь каналы продвижения, методы взаимодействия с
+            посетителями и планируемые мероприятия — напрямую влияют на функционал и интерфейс магазина.</p>
+          <a onclick="GoToForm()" class="btn rounded-1 neu-flat mt-3 center d-flex">Обсудить разработку</a>
         </div>
-      </nav>
-    </header>
-    <main class="container p-3">
-      <section class="section main__section">
-        <div class="d-flex fx-wrap container">
-          <div class="text-lead mt-3">
-            <h1 class="title mb-2"><strong class="bold-text">Разрабатываем интернет-магазины с наполнением, интеграцией, стратегией продвижения и комплексной аналитикой</strong></h1>
-            <h3 class="subtitle mt-0">Работаем со всеми странами СНГ</h3>
-            <a onclick="GoToForm()" class="btn rounded-1 neu-flat mt-3"><strong>Обсудить разработку</strong></a>
-          </div>
-          <div class="image-cont vself-center mt-5 d-flex fx-center"><img src="/img/duck/e-com.svg" loading="lazy" height="400" alt="McProfit logotype" width="400" class="hero__logotype" /></div>
-        </div>
-      </section>
-      <section class="section section__advantages mt-5">
-        <div class="d-flex fx-wrap container">
-          <div class="text-lead neu-bordered rounded-2 p-3" style="order:2;">
-            <h2 class="title title__center">Наши ключевые отличия</h2>
-            <ul role="list" class="mt-2 pl-4">
-              <li class="advantages__item m-2">Строим полноценную систему: интернет-магазин + наполнение + стратегия продвижения + внутренняя кухня</li>
-              <li class="advantages__item m-2">Внедрям полноценную аналитику и отчётность</li>
-              <li class="advantages__item m-2">Используем маркетинговый подход на всех этапах работы</li>
-              <li class="advantages__item m-2">Ведём диалог на доступном языке</li>
-            </ul>
-          </div>
-          <div class="image-cont m-4" style="order:1;"><img src="/img/duck/seo.svg" loading="lazy" alt="" class="image" /></div>
-        </div>
-      </section>
-      <section class="section section__advantages mt-5">
-        <div class="d-flex fx-wrap container">
-          <div class="text-lead neu-bordered rounded-2 p-3" style="order:1;">
-            <h2 class="title title__center">Вы наш идеальный клиент, если:</h2>
-            <ul role="list" class="mt-2 pl-4">
-              <li class="advantages__item m-2">У Вас есть представление что происходит в Вашем бизнесе</li>
-              <li class="advantages__item m-2">Вы ежегодно планируете и выделяете бюджет на продвижение и развитие</li>
-              <li class="advantages__item m-2">У Вас есть оффлайн торговая точка</li>
-              <li class="advantages__item m-2">Ваши товары востребованы и качественны</li>
-              <li class="advantages__item m-2">У Вас есть план по развитию бизнеса, и это не "та самая бумажка для галочки"</li>
-            </ul>
-            <h3 class="title title__center">Вы наш клиент, даже если:</h3>
-            <ul role="list" class="mt-2 pl-4">
-              <li class="advantages__item m-2">У Вас большой разнородный ассортимент</li>
-              <li class="advantages__item m-2">Большое количество видов товара (больше 10 000шт)</li>
-            </ul>
-          </div>
-          <div class="image-cont m-4" style="order:2;"><img src="/img/duck/comp.svg" loading="lazy" alt="" class="image" /></div>
-        </div>
-      </section>
-      <!-- Место для лидмагнита -->
-      <section class="section section__resolve mt-5">
-        <div class="container neu-flat rounded-2 p-3 d-flex fx-col fx-center">
-          <h2 class="title title__center">Система Электронной Коммерции</h2>
-          <p class="">Мы не делаем интернет-магазины под ключ — мы разрабатываем полноценные системы электронной коммерции. В чём отличие такого подхода, сейчас покажем.<br> На рисунке ниже представлена технология продажи, точнее её "внешняя часть" — внутренний маркетинг сайта, а так же механику бизнеса здесь опускаем.</p>
-          <img src="/img/decore/site-system.svg" alt="система интернет-маркетинга для интернет-магазина" class="rounded-1 poster-decore" loading="lazy">
-          <p class="image-note">Технология состоит из внутренней структуры сайта — каким образом страницы будут перемещать посетителя и из внешней: источники посещения, рекламные системы, контент-маркетинг и других элементов. Технология проектируется под каждый проект индивидуально, исходя из бизнес-процесса и проведённой аналитики.</p>
-          <p class="">Технология превращается в систему когда все элементы работают как шестерни в механизме, когда все инструменты маркетинга "работают сообща" на достижение цели — пополнение бюджета компании.</p>
-          <a onclick="GoToForm()" class="btn rounded-1 neu-pressed neu-lighten mt-3 mb-2 center">Получите больше информации</a>
-        </div>
-      </section>
-      <!-- Место для лидмагнита -->
-      <section class="section section__resolve mt-5">
-        <div class="container neu-flat rounded-2 p-3 d-flex fx-col fx-center">
-          <h2 class="title title__center">Проектирование вместо шаблона</h2>
-          <p class="">Бесконечные переделки, правки, поиск фрилансеров... — всё это последствия наобум созданного сайта: то не хватает раздела, то функционал не работает, а то и вовсе — посетители есть, а покупок нет. И самое страшное в такой ситуации — никто не скажет почему?...</p>
-          <p class="">В итоге уходят деньги, издержки растут, а продажи через онлайн стоят на месте.</p>
-          <p>Мы держимся иного подхода, в самом деле никто ведь не станет строить небоскрёб без предварительных инженерных расчётов — проектирования! Но когда речь заходит о бизнес-инструменте, а интернет-магазин больше чем инструмент - это целая система, — о проектировании напрочь забывают. При том что на стадии проектирования найти и исправить ошибки быстрее и дешевле!</p>
-          <br>
-          <p>Для создания правильной, продающей структуры сайта мы делаем:</p>
-          <ul role="list" class="clear-list  mt-2">
-            <li class="advantages__item m-2">
-              <p class="neu-bordered rounded-2 p-3 width-100">Погружение в Ваш бизнес и бизнес-процессы</p>
-              <p class="txt">В самом деле есть разница в проектировании интернет-магазина для бизнеса с оффлайн-торговлей и в случае когда интернет-магазин самостоятельный бизнес.</p>
-            </li>
-            <li class="advantages__item m-2">
-              <p class="neu-bordered rounded-2 p-3 width-100">Внимательно и полностью выслушиваем всё Ваше видение магазина</p>
-              <p class="txt"></p>
-            </li>
-            <li class="advantages__item m-2">
-              <p class="neu-bordered rounded-2 p-3 width-100">Исследуем целевую аудиторию</p>
-              <p class="txt">Критерии выбора, задачи связанные с интернет-магазином, проблемы на пути к покупке.</p>
-            </li>
-            <li class="advantages__item m-2">
-              <p class="neu-bordered rounded-2 p-3 width-100">Анализируем рынок и конкурентов</p>
-              <p class="txt"></p>
-            </li>
-            <li class="advantages__item m-2">
-              <p class="neu-bordered rounded-2 p-3 width-100">Закладываем в интерфейс маркетинговые цепочки — сайт ведёт посетителя к покупке</p>
-              <p class="txt"></p>
-            </li>
-            <li class="advantages__item m-2">
-              <p class="neu-bordered rounded-2 p-3 width-100">Учитываем "точки входа" посетителя на сайт и методы продвижения при разработке структуры сайта</p>
-              <p class="txt"></p>
-            </li>
-            <li class="advantages__item m-2">
-              <p class="neu-bordered rounded-2 p-3 width-100">Ориентируемся на лучшие механики UX-проектирования</p>
-              <p class="txt"></p>
-            </li>
-            <li class="advantages__item m-2">
-              <p class="neu-bordered rounded-2 p-3 width-100">Создаём динамический прототип магазина и тестируем его на реальных людях</p>
-              <p class="txt"></p>
-            </li>
+        <div class="image-cont m-4" style="order:2;"><img src="/img/decore/question.svg" loading="lazy" alt=""
+            class="image" /></div>
+      </div>
+    </section>
+    <section class="section section__advantages mt-5">
+      <div class="d-flex fx-wrap container">
+        <div class="text-lead neu-bordered rounded-2 p-3" style="order:2;">
+          <h2 class="title title__center">Интеграция и аналитика</h2>
+          <p class="">Выполняем интеграцию интернет-магазина с внешними сервисами, такими как платёжные системы:</p>
+          <ul role="list" class="mt-2 pl-4">
+            <li class="advantages__item m-2">ЕРИП</li>
+            <li class="advantages__item m-2">Эквайринг</li>
+            <li class="advantages__item m-2">Платежи банковскими картами</li>
           </ul>
-          <a onclick="GoToForm()" class="btn rounded-1 neu-pressed neu-lighten mt-3 mb-2 center">Обсудить разработку</a>
-        </div>
-      </section>
-      <!-- Место для лидмагнита -->
-      <section class="section section__advantages mt-5">
-        <div class="d-flex fx-wrap container">
-          <div class="text-lead neu-bordered rounded-2 p-3" style="order:1;">
-            <h2 class="title title__center">Что делать первым: маркетинг или интернет-магазин?</h2>
-            <p class="">Ещё одна головная боль предпринимателя — продвижение. Ведь даже идеально построенный с позиции маркетинга интернет-магазин будет совершенно бесполезен без посетителей. Надеяться на чудо, что они сами придут — не стоит.</p>
-            <p class="">Мы строим полноценную систему электронной коммерции, в которой всё учтено, поэтому разработка маркетинговой стратегии идёт ещё на этапе проектирования. Ведь каналы продвижения, методы взаимодействия с посетителями и планируемые мероприятия — напрямую влияют на функционал и интерфейс магазина.</p>
-            <a onclick="GoToForm()" class="btn rounded-1 neu-flat mt-3 center d-flex">Обсудить разработку</a>
-          </div>
-          <div class="image-cont m-4" style="order:2;"><img src="/img/decore/question.svg" loading="lazy" alt="" class="image" /></div>
-        </div>
-      </section>
-      <section class="section section__advantages mt-5">
-        <div class="d-flex fx-wrap container">
-          <div class="text-lead neu-bordered rounded-2 p-3" style="order:2;">
-            <h2 class="title title__center">Интеграция и аналитика</h2>
-            <p class="">Выполняем интеграцию интернет-магазина с внешними сервисами, такими как платёжные системы:</p>
-            <ul role="list" class="mt-2 pl-4">
-              <li class="advantages__item m-2">ЕРИП</li>
-              <li class="advantages__item m-2">Эквайринг</li>
-              <li class="advantages__item m-2">Платежи банковскими картами</li>
-            </ul>
-            <p class="">CRM-системами, складским учётом и прочим софтом</p>
-            <ul role="list" class="mt-2 pl-4">
-              <li class="advantages__item m-2">1С</li>
-              <li class="advantages__item m-2">Битрикс CRM</li>
-              <li class="advantages__item m-2">Мой склад</li>
-            </ul>
-            <p class="">Настраиваем систему аналитики по основным KPI для электронной торговли и генерацию ежемесячных отчётов.</p>
-          </div>
-          <div class="image-cont m-4" style="order:1;"><img src="/img/duck/analytics.svg" loading="lazy" alt="" class="image" /></div>
-        </div>
-      </section>
-      <section class="section section__advantages mt-5">
-        <div class="d-flex fx-wrap container">
-          <div class="text-lead neu-bordered rounded-2 p-3" style="order:1;">
-            <h2 class="title title__center">Запуск и поддержка системного маркетинга</h2>
-            <p class="">На условиях отдельного договора проконтролируем реализацию маркетинговой стратегии:</p>
-            <ul role="list" class="mt-2 pl-4">
-              <li class="advantages__item m-2">Найдём исполнителей</li>
-              <li class="advantages__item m-2">Контроллируем KPI</li>
-              <li class="advantages__item m-2">Оптимизируем стратегию</li>
-            </ul>
-            <p class="">Или Вы можете сделать это самостоятельно</p>
-          </div>
-          <div class="image-cont m-4" style="order:2;"><img src="/img/duck/system.svg" loading="lazy" alt="" class="image" /></div>
-        </div>
-      </section>
-      <section class="section section__resolve mt-5">
-        <div class="container neu-flat rounded-2 p-3 d-flex fx-col fx-center">
-          <h2 class="title title__center m-0">Пришло время сделать шаг в сторону системного бизнеса</h2>
-          <p class="">Заполните форму ниже и мы с вами свяжемся чтобы предоставить дополнительную информацию, назначим дату для видео-конференции и обсудим интересующие Вас вопросы.</p>
-          <img src="/img/duck/target.svg" loading="lazy" alt="" class="img-poster" />
-        </div>
-        <div class="container neu-bordered rounded-2 p-3 mt-5">
-          <form id="leadForm" class="lead-form" onsubmit="return false;">
-            <div class="form-field">
-              <label for="name">Имя</label>
-              <input type="text" name="name" id="name" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
-            </div>
-            <div class="form-field">
-              <label for="orgname">Название организации</label>
-              <input type="text" name="company" id="orgname" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
-            </div>
-            <div class="form-field">
-              <label for="pos">Должность</label>
-              <input type="text" name="position" id="pos" data-neu-focus="neu-bordered" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
-            </div>
-            <div class="form-field">
-              <label for="email"><strong>Рабочий</strong> Email</label>
-              <input type="email" name="email" id="email" class="form-control neu-flat rounded-1" placeholder="contact@example.com" data-rules='["required","email"]'>
-            </div>
-            <div class="form-field" style="width: 100%;">
-              <label for="phone">Контактный телефон</label>
-              <input name="phone" type="phone" id="phone" class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
-            </div>
-            <div class="form-field comment">
-              <label for="textarea">Проясните какие вопросы вас интересуют</label>
-              <textarea id="textarea" name="comment" class="form-control neu-flat rounded-1" data-neu-focus="neu-pressed"></textarea>
-            </div>
-            <button onclick="submitForm()" class="btn rounded-1 neu-pressed neu-lighten  mt-3 mb-2 send-button">Получить информацию</button>
-            <div>
-              <p>Отправляя форму вы автоматически принимаете <a href="/privacy-policy.html">политику конфиденциальности и обработки персональных данных</a>.</p>
-            </div>
-          </form>
-        </div>
-      </section>
-      <section class="section section__openecom mt-5">
-        <div class="container neu-flat rounded-2 p-3 d-flex fx-col fx-center">
-          <h2 class="title title__center m-0">Этапы открытия интернет-магазина</h2>
-          <ul role="list" class="clear-list  mt-3 d-flex fx-wrap">
-            <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3">
-              <p class=""><strong>Выбор ниши</strong></p>
-              <hr>
-              <p class="txt">Выбор сферы продаж и товарной базы</p>
-            </li>
-            <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3 neu-darken">
-              <p class=""><strong>Интернет-магазин</strong></p>
-              <hr>
-              <p class="txt"><b>С разработкой интернет-магазина мы Вам поможем</b></p>
-            </li>
-            <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3">
-              <p class=""><strong>Поиск команды</strong></p>
-              <hr>
-              <p class="txt">Сотрудников лучше найти заранее, а не когда "уже заказы паковать пора"</p>
-            </li>
-            <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3">
-              <p class=""><strong>Договорённости</strong></p>
-              <hr>
-              <p class="txt">С складом и арендой офиса заключить <u>предварительную</u> договорённость.</p>
-            </li>
-            <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3 neu-darken">
-              <p class=""><strong>Наполнение</strong></p>
-              <hr>
-              <p class="txt"><b>Наполнить каталог интернет-магазина — дело тоже наше!</b></p>
-            </li>
-            <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3">
-              <p class=""><strong>Открытие юр лица</strong></p>
-              <hr>
-              <p class="txt">Теперь нужно всё правильно оформить.</p>
-            </li>
-            <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3">
-              <p class=""><strong>Система</strong></p>
-              <hr>
-              <p class="txt">Теперь нужно заняться комплексным и регулярным привлечением клиентов</p>
-            </li>
+          <p class="">CRM-системами, складским учётом и прочим софтом</p>
+          <ul role="list" class="mt-2 pl-4">
+            <li class="advantages__item m-2">1С</li>
+            <li class="advantages__item m-2">Битрикс CRM</li>
+            <li class="advantages__item m-2">Мой склад</li>
           </ul>
+          <p class="">Настраиваем систему аналитики по основным KPI для электронной торговли и генерацию ежемесячных
+            отчётов.</p>
         </div>
-      </section>
-      <section class="section section__tools mt-5">
-        <div class="container neu-bordered rounded-2 p-3">
-          <h1 class="title no-margins title__center">Используем в работе инструменты</h1>
-          <ul role="list" class="clear-list d-flex fx-wrap using-list">
-            <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/browserstack-logo.svg" loading="lazy" width="50" alt="" /></li>
-            <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/semrush-logo.svg" loading="lazy" height="30" alt="" /></li>
-            <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/axure-logo.svg" loading="lazy" height="30" alt="" /></li>
-            <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/serpstat-logo.svg" loading="lazy" height="30" alt="" /></li>
-            <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/figma.svg" loading="lazy" height="30" alt="" /></li>
-            <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/netlify.svg" loading="lazy" height="30" alt="" /></li>
+        <div class="image-cont m-4" style="order:1;"><img src="/img/duck/analytics.svg" loading="lazy" alt=""
+            class="image" /></div>
+      </div>
+    </section>
+    <section class="section section__advantages mt-5">
+      <div class="d-flex fx-wrap container">
+        <div class="text-lead neu-bordered rounded-2 p-3" style="order:1;">
+          <h2 class="title title__center">Запуск и поддержка системного маркетинга</h2>
+          <p class="">На условиях отдельного договора проконтролируем реализацию маркетинговой стратегии:</p>
+          <ul role="list" class="mt-2 pl-4">
+            <li class="advantages__item m-2">Найдём исполнителей</li>
+            <li class="advantages__item m-2">Контроллируем KPI</li>
+            <li class="advantages__item m-2">Оптимизируем стратегию</li>
           </ul>
+          <p class="">Или Вы можете сделать это самостоятельно</p>
         </div>
-      </section>
-    </main>
-    <footer id="footer" class="footer mt-5">
-      <div class="container neu-flat rounded-2 p-3">
-        <div class="d-flex fx-wrap">
-          <a href="/index.html" class="footer-logo-link mt-3"><img src="/img/duck/mcprofit-logo.svg" alt="" class="footer-image"></a>
-          <div class="margin mt-3">
-            <h2 class="footer-heading">Материалы</h2>
-            <ul role="list" class="clear-list">
-              <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/blog.html" class="footer-link">Блог</a></li>
-              <li class="rounded-1 neu-pressed p-2 mt-3"><a href="https://db.mcprofit.biz" target="_blank" class="footer-link">База знаний</a></li>
-            </ul>
+        <div class="image-cont m-4" style="order:2;"><img src="/img/duck/system.svg" loading="lazy" alt=""
+            class="image" /></div>
+      </div>
+    </section>
+    <section class="section section__resolve mt-5">
+      <div class="container neu-flat rounded-2 p-3 d-flex fx-col fx-center">
+        <h2 class="title title__center m-0">Пришло время сделать шаг в сторону системного бизнеса</h2>
+        <p class="">Заполните форму ниже и мы с вами свяжемся чтобы предоставить дополнительную информацию, назначим
+          дату для видео-конференции и обсудим интересующие Вас вопросы.</p>
+        <img src="/img/duck/target.svg" loading="lazy" alt="" class="img-poster" />
+      </div>
+      <div class="container neu-bordered rounded-2 p-3 mt-5">
+        <form id="leadForm" class="lead-form" onsubmit="return false;">
+          <div class="form-field">
+            <label for="name">Имя</label>
+            <input type="text" name="name" id="name" data-neu-focus="neu-bordered"
+              class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
           </div>
-          <div class="margin mt-3">
-            <h2 class="footer-heading">Навигация</h2>
-            <ul role="list" class="clear-list">
-              <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/" class="footer-link active">Главная</a></li>
-              <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/our-works.html" class="footer-link">Наши работы</a></li>
-              <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/about.html" class="footer-link">О нас</a></li>
-              <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/privacy-policy.html" class="footer-link">Политика конфиденциальности</a></li>
-            </ul>
+          <div class="form-field">
+            <label for="orgname">Название организации</label>
+            <input type="text" name="company" id="orgname" data-neu-focus="neu-bordered"
+              class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
           </div>
-          <div class="margin mt-3">
-            <h2 id="contacts" class="footer-heading">Контакты</h2>
-            <p class="subtitle">Время работы: пн-пт 6:45 - 17:30</p>
-            <ul role="list" class="clear-list">
-              <li class="mt-2"><p class="txt">Телефон:</p><a href="tel://+375257764484" class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a></li>
-              <li class="mt-2"><p class="txt" lang="en">Viber:</p><a href="viber://add?number=+375257764484" class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a></li>
-              <li class="mt-2"><p class="txt" lang="en">Telegram:</p><a href="https://t.me/lexsalesman" class="rounded-1 neu-pressed p-2 footer-link">@lexsalesmam</a></li>
-              <li class="mt-2"><p class="txt" lang="en">E-mail:</p><a href="mailto://info@mcprofit.biz" class="rounded-1 neu-pressed p-2 footer-link">info@mcprofit.biz</a></li>
-            </ul>
+          <div class="form-field">
+            <label for="pos">Должность</label>
+            <input type="text" name="position" id="pos" data-neu-focus="neu-bordered"
+              class="form-control neu-flat rounded-1" data-rules='["required","string", "minimum:3"]'>
           </div>
-          <div class="width-100 mt-3">
-            <div class="self-center">
-              <h2 class="footer-heading mt-5 txt-center">Мы в соц сетях</h2>
-              <ul role="list" class="clear-list social-media mt-2 d-flex fx-wrap">
-                <li class="item m-2"><a href="https://www.linkedin.com/company/mcprofit"><img src="img/socm/linkedin.svg"><span class="visual-hidden" lang="en">LinkedIn</span></a></li>
-                <li class="item m-2"><a href="https://www.facebook.com/profile.php?id=100068552763940"><img src="img/socm/facebook.svg"><span class="visual-hidden" lang="en">FaceBook</span></a></li>
-                <li class="item m-2"><a href="https://vk.com/mcprofit_biz"><img src="img/socm/vk.svg"><span class="visual-hidden" lang="en">Vkontakte</span></a></li>
-                <li class="item m-2"><a href="https://instagram.com/mcprofit.biz"><img src="img/socm/instagram.svg"><span class="visual-hidden" lang="en">Instagram</span></a></li>
-                <li class="item m-2"><a href="https://www.pinterest.com/McProfit_biz/"><img src="img/socm/pinterest.svg"><span class="visual-hidden" lang="en">Pinterest</span></a></li>
-                <li class="item m-2"><a href="https://twitter.com/McProfit_Biz"><img src="img/socm/twitter.svg"><span class="visual-hidden" lang="en">Twitter</span></a></li>
-                <li class="item m-2"><a href="https://github.com/McProfit"><img src="img/socm/github.svg"><span class="visual-hidden" lang="en">GitHub</span></a></li>
-                <li class="item m-2"><a href="https://www.tiktok.com/@lex.salesman"><img src="img/socm/tiktok.svg"><span class="visual-hidden" lang="en">TikTok</span></a></li>
-              </ul>
-            </div>
+          <div class="form-field">
+            <label for="email"><strong>Рабочий</strong> Email</label>
+            <input type="email" name="email" id="email" class="form-control neu-flat rounded-1"
+              placeholder="contact@example.com" data-rules='["required","email"]'>
           </div>
-        </div>
-        <div class="legal__info title__center mt-5">
-          <p class="m-0">Индивидуальный Предприниматель Шилов А.В. УНП 291486519</p>
-        </div>
-        <div class="title__center mt-1"><strong>© 2021 McProfit</strong></div>
+          <div class="form-field" style="width: 100%;">
+            <label for="phone">Контактный телефон</label>
+            <input name="phone" type="phone" id="phone" class="form-control neu-flat rounded-1"
+              data-rules='["required","string", "minimum:3"]'>
+          </div>
+          <div class="form-field comment">
+            <label for="textarea">Проясните какие вопросы вас интересуют</label>
+            <textarea id="textarea" name="comment" class="form-control neu-flat rounded-1"
+              data-neu-focus="neu-pressed"></textarea>
+          </div>
+          <button onclick="submitForm()" class="btn rounded-1 neu-pressed neu-lighten  mt-3 mb-2 send-button">Получить
+            информацию</button>
+          <div>
+            <p>Отправляя форму вы автоматически принимаете <a href="/privacy-policy.html">политику конфиденциальности и
+                обработки персональных данных</a>.</p>
+          </div>
+        </form>
       </div>
-    </footer>
-    <aside class="sidenav shadow-1 neu-flat pl-3 pr-3" id="mobiMenu" data-ax="sidenav">
-      <div class="sidenav-header">
-        <img class="sidenav-logo dropshadow-1" src="/img/duck/mcprofit-logo.svg" alt="Logo" />
-        <button data-target="mobiMenu" class="sidenav-trigger"><strong>X</strong></button>
-      </div>
-      <a href="/" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Главная</a>
-      <a href="/blog.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Блог</a>
-      <a href="https://db.mcprofit.biz" target="_blank" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">База знаний</a>
-      <a href="/our-works.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Наши работы</a>
-      <a href="/about.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">О нас</a>
-    </aside>
-
-    <div class="modal shadow-1 neu-flat rounded-3" id="thanq">
-      <div class="modal-header title">
-        Вы на верном пути
-        <button data-target="thanq" class="btn neu-flat modal-trigger">
-          X
-        </button>
-      </div>
-      <div class="modal-content">
-        <h4 class="title">Благодарим за обращение, мы свяжемся с вами в течении 30 минут чтобы назначить время консультации.</h4>
-      </div>
-      <div class="modal-footer">
-        <button class="btn neu-flat rounded-2 modal-trigger width-100" data-target="thanq">Хорошо</button>
-      </div>
-    </div>
-    <div class="modal shadow-1 neu-flat rounded-3" id="fail">
-      <div class="modal-header title">
-        Произошла ошибка
-        <button data-target="fail" class="btn neu-flat modal-trigger">
-          X
-        </button>
-      </div>
-      <div class="modal-content">
-        <h4 class="title">При попытке отправки формы произошла ошибка, попробуйте отправить запрос позже или свяжитесь с нами одним из способов ниже</h4>
-        <ul role="list" class="clear-list">
-          <li class="mt-2"><p class="txt">Телефон:</p><a href="tel://+375257764484" class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a></li>
-          <li class="mt-2"><p class="txt" lang="en">Viber:</p><a href="viber://add?number=+375257764484" class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a></li>
-          <li class="mt-2"><p class="txt" lang="en">Telegram:</p><a href="#" class="rounded-1 neu-pressed p-2 footer-link">@lexsalesmam</a></li>
-          <li class="mt-2"><p class="txt" lang="en">E-mail:</p><a href="mailto://info@mcprofit.biz" class="rounded-1 neu-pressed p-2 footer-link">info@mcprofit.biz</a></li>
+    </section>
+    <section class="section section__openecom mt-5">
+      <div class="container neu-flat rounded-2 p-3 d-flex fx-col fx-center">
+        <h2 class="title title__center m-0">Этапы открытия интернет-магазина</h2>
+        <ul role="list" class="clear-list  mt-3 d-flex fx-wrap">
+          <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3">
+            <p class=""><strong>Выбор ниши</strong></p>
+            <hr>
+            <p class="txt">Выбор сферы продаж и товарной базы</p>
+          </li>
+          <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3 neu-darken">
+            <p class=""><strong>Интернет-магазин</strong></p>
+            <hr>
+            <p class="txt"><b>С разработкой интернет-магазина мы Вам поможем</b></p>
+          </li>
+          <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3">
+            <p class=""><strong>Поиск команды</strong></p>
+            <hr>
+            <p class="txt">Сотрудников лучше найти заранее, а не когда "уже заказы паковать пора"</p>
+          </li>
+          <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3">
+            <p class=""><strong>Договорённости</strong></p>
+            <hr>
+            <p class="txt">С складом и арендой офиса заключить <u>предварительную</u> договорённость.</p>
+          </li>
+          <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3 neu-darken">
+            <p class=""><strong>Наполнение</strong></p>
+            <hr>
+            <p class="txt"><b>Наполнить каталог интернет-магазина — дело тоже наше!</b></p>
+          </li>
+          <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3">
+            <p class=""><strong>Открытие юр лица</strong></p>
+            <hr>
+            <p class="txt">Теперь нужно всё правильно оформить.</p>
+          </li>
+          <li class="openecom__item m-2 mt-3 neu-bordered rounded-2 p-3">
+            <p class=""><strong>Система</strong></p>
+            <hr>
+            <p class="txt">Теперь нужно заняться комплексным и регулярным привлечением клиентов</p>
+          </li>
         </ul>
       </div>
-      <div class="modal-footer">
-        <button class="btn neu-flat rounded-2 modal-trigger width-100" data-target="fail">Хорошо</button>
+    </section>
+    <section class="section section__tools mt-5">
+      <div class="container neu-bordered rounded-2 p-3">
+        <h1 class="title no-margins title__center">Используем в работе инструменты</h1>
+        <ul role="list" class="clear-list d-flex fx-wrap using-list">
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/browserstack-logo.svg"
+              loading="lazy" width="50" alt="" /></li>
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/semrush-logo.svg" loading="lazy"
+              height="30" alt="" /></li>
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/axure-logo.svg" loading="lazy"
+              height="30" alt="" /></li>
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/serpstat-logo.svg" loading="lazy"
+              height="30" alt="" /></li>
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/figma.svg" loading="lazy"
+              height="30" alt="" /></li>
+          <li class="logo neu-flat rounded-2 p-2 m-2 mt-4 mb-4"><img src="/img/tools/netlify.svg" loading="lazy"
+              height="30" alt="" /></li>
+        </ul>
       </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer mt-5">
+    <div class="container neu-flat rounded-2 p-3">
+      <div class="d-flex fx-wrap">
+        <a href="/index.html" class="footer-logo-link mt-3"><img src="/img/duck/mcprofit-logo.svg" alt=""
+            class="footer-image"></a>
+        <div class="margin mt-3">
+          <h2 class="footer-heading">Материалы</h2>
+          <ul role="list" class="clear-list">
+            <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/blog.html" class="footer-link">Блог</a></li>
+            <li class="rounded-1 neu-pressed p-2 mt-3"><a href="https://db.mcprofit.biz" target="_blank"
+                class="footer-link">База знаний</a></li>
+          </ul>
+        </div>
+        <div class="margin mt-3">
+          <h2 class="footer-heading">Навигация</h2>
+          <ul role="list" class="clear-list">
+            <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/" class="footer-link active">Главная</a></li>
+            <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/our-works.html" class="footer-link">Наши работы</a>
+            </li>
+            <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/about.html" class="footer-link">О нас</a></li>
+            <li class="rounded-1 neu-pressed p-2 mt-3"><a href="/privacy-policy.html" class="footer-link">Политика
+                конфиденциальности</a></li>
+          </ul>
+        </div>
+        <div class="margin mt-3">
+          <h2 id="contacts" class="footer-heading">Контакты</h2>
+          <p class="subtitle">Время работы: пн-пт 6:45 - 17:30</p>
+          <ul role="list" class="clear-list">
+            <li class="mt-2">
+              <p class="txt">Телефон:</p><a href="tel://+375257764484"
+                class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a>
+            </li>
+            <li class="mt-2">
+              <p class="txt" lang="en">Viber:</p><a href="viber://add?number=+375257764484"
+                class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a>
+            </li>
+            <li class="mt-2">
+              <p class="txt" lang="en">Telegram:</p><a href="https://t.me/lexsalesman"
+                class="rounded-1 neu-pressed p-2 footer-link">@lexsalesmam</a>
+            </li>
+            <li class="mt-2">
+              <p class="txt" lang="en">E-mail:</p><a href="mailto://info@mcprofit.biz"
+                class="rounded-1 neu-pressed p-2 footer-link">info@mcprofit.biz</a>
+            </li>
+          </ul>
+        </div>
+        <div class="width-100 mt-3">
+          <div class="self-center">
+            <h2 class="footer-heading mt-5 txt-center">Мы в соц сетях</h2>
+            <ul role="list" class="clear-list social-media mt-2 d-flex fx-wrap">
+              <li class="item m-2"><a href="https://vk.com/mcprofit_biz"><img src="img/socm/vk.svg"><span
+                    class="visual-hidden" lang="en">Vkontakte</span></a></li>
+              <li class="item m-2"><a href="https://instagram.com/mcprofit.biz"><img src="img/socm/instagram.svg"><span
+                    class="visual-hidden" lang="en">Instagram</span></a></li>
+              <li class="item m-2"><a href="https://www.pinterest.com/McProfit_biz/"><img
+                    src="img/socm/pinterest.svg"><span class="visual-hidden" lang="en">Pinterest</span></a></li>
+              <li class="item m-2"><a href="https://twitter.com/McProfit_Biz"><img src="img/socm/twitter.svg"><span
+                    class="visual-hidden" lang="en">Twitter</span></a></li>
+              <li class="item m-2"><a href="https://github.com/McProfit"><img src="img/socm/github.svg"><span
+                    class="visual-hidden" lang="en">GitHub</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="legal__info title__center mt-5">
+        <p class="m-0">Индивидуальный Предприниматель Шилов А.В. УНП 291486519</p>
+      </div>
+      <div class="title__center mt-1"><strong>© 2021 McProfit</strong></div>
     </div>
+  </footer>
+  <aside class="sidenav shadow-1 neu-flat pl-3 pr-3" id="mobiMenu" data-ax="sidenav">
+    <div class="sidenav-header">
+      <img class="sidenav-logo dropshadow-1" src="/img/duck/mcprofit-logo.svg" alt="Logo" />
+      <button data-target="mobiMenu" class="sidenav-trigger"><strong>X</strong></button>
+    </div>
+    <a href="/" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Главная</a>
+    <a href="/blog.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Блог</a>
+    <a href="https://db.mcprofit.biz" target="_blank"
+      class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">База знаний</a>
+    <a href="/our-works.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">Наши работы</a>
+    <a href="/about.html" class="sidenav-link btn rounded-1 neu-pressed neu-lighten p-2 width-100">О нас</a>
+  </aside>
 
-    <script>
-     let MenuDown = new Axentix.Dropdown('#menudd');
+  <div class="modal shadow-1 neu-flat rounded-3" id="thanq">
+    <div class="modal-header title">
+      Вы на верном пути
+      <button data-target="thanq" class="btn neu-flat modal-trigger">
+        X
+      </button>
+    </div>
+    <div class="modal-content">
+      <h4 class="title">Благодарим за обращение, мы свяжемся с вами в течении 30 минут чтобы назначить время
+        консультации.</h4>
+    </div>
+    <div class="modal-footer">
+      <button class="btn neu-flat rounded-2 modal-trigger width-100" data-target="thanq">Хорошо</button>
+    </div>
+  </div>
+  <div class="modal shadow-1 neu-flat rounded-3" id="fail">
+    <div class="modal-header title">
+      Произошла ошибка
+      <button data-target="fail" class="btn neu-flat modal-trigger">
+        X
+      </button>
+    </div>
+    <div class="modal-content">
+      <h4 class="title">При попытке отправки формы произошла ошибка, попробуйте отправить запрос позже или свяжитесь с
+        нами одним из способов ниже</h4>
+      <ul role="list" class="clear-list">
+        <li class="mt-2">
+          <p class="txt">Телефон:</p><a href="tel://+375257764484" class="rounded-1 neu-pressed p-2 footer-link">+375 25
+            776-44-84</a>
+        </li>
+        <li class="mt-2">
+          <p class="txt" lang="en">Viber:</p><a href="viber://add?number=+375257764484"
+            class="rounded-1 neu-pressed p-2 footer-link">+375 25 776-44-84</a>
+        </li>
+        <li class="mt-2">
+          <p class="txt" lang="en">Telegram:</p><a href="#"
+            class="rounded-1 neu-pressed p-2 footer-link">@lexsalesmam</a>
+        </li>
+        <li class="mt-2">
+          <p class="txt" lang="en">E-mail:</p><a href="mailto://info@mcprofit.biz"
+            class="rounded-1 neu-pressed p-2 footer-link">info@mcprofit.biz</a>
+        </li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button class="btn neu-flat rounded-2 modal-trigger width-100" data-target="fail">Хорошо</button>
+    </div>
+  </div>
 
-     function GoToForm() {
-       document.getElementById("leadForm").scrollIntoView({
-         behavior: 'smooth',
-         block: 'start'
-       });
-     }
+  <script>
+    let MenuDown = new Axentix.Dropdown('#menudd');
 
-     let thanq = new Axentix.Modal('#thanq');
-     let fail = new Axentix.Modal('#fail');
+    function GoToForm() {
+      document.getElementById("leadForm").scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
 
-     function submitForm() {
+    let thanq = new Axentix.Modal('#thanq');
+    let fail = new Axentix.Modal('#fail');
 
-       let form = document.getElementById('leadForm');
+    function submitForm() {
 
-       // This is a nice way of getting a list of checkable input elements
-       // And converting them into an array so we can use map/filter/reduce functions:
-       let inputs = [...form.querySelectorAll("input[data-rules]")];
+      let form = document.getElementById('leadForm');
 
-       let valid = true;
+      // This is a nice way of getting a list of checkable input elements
+      // And converting them into an array so we can use map/filter/reduce functions:
+      let inputs = [...form.querySelectorAll("input[data-rules]")];
 
-       inputs.map((input) => {
-         if (Iodine.is(input.value, JSON.parse(input.dataset.rules)) !== true) {
-           input.classList.add("invalid");
-           valid = false;
-         }
-       });
+      let valid = true;
 
-       if (valid) {
-         fetch('https://api.mcprofit.biz/rpc/add_lfs_ecom_general', {
-		   method: 'POST',
-		   body: JSON.stringify(Object.fromEntries(new FormData(form))),
-		   headers: {
-		     'Content-type': 'application/json; charset=UTF-8'
-		   }
-	     }).then(function (response) {
-           if (response.ok) {
-             thanq.open();
+      inputs.map((input) => {
+        if (Iodine.is(input.value, JSON.parse(input.dataset.rules)) !== true) {
+          input.classList.add("invalid");
+          valid = false;
+        }
+      });
 
-		     return response.json();
-		   }
+      const TmpForm = Object.fromEntries(new FormData(form));
 
-           fail.open();
+      if (valid) {
+        fetch(`https://mcprofit.biz/sendlead.php?name=${TmpForm.name}&position=${TmpForm.position}&company=${TmpForm.company}&email=${TmpForm.email}&phone=${TmpForm.phone}&note=${TmpForm.comment}`, {
+          method: 'POST',
+        }).then(function (response) {
+          if (response.ok) {
+            thanq.open();
 
-		   return Promise.reject(response);
-	     }).then(function (data) {
-		   console.log(data);
-	     }).catch(function (error) {
-		   console.warn(error);
-	     });
-       }
-     }
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/mattkingshott/iodine@3/dist/iodine.min.js" defer></script>
+            return response.json();
+          }
 
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+          fail.open();
 
-     ym(79471306, "init", {
-       clickmap:true,
-       trackLinks:true,
-       accurateTrackBounce:true,
-       webvisor:true
-     });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/79471306" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYK90BCGFD"></script>
-    <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
+          return Promise.reject(response);
+        }).then(function (data) {
+          console.log(data);
+        }).catch(function (error) {
+          console.warn(error);
+        });
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/mattkingshott/iodine@3/dist/iodine.min.js" defer></script>
+  <script src="//code.jivo.ru/widget/xnhhMu8NJB" async></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-     gtag('config', 'G-TYK90BCGFD');
-    </script>
-  </body>
+    ym(79471306, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/79471306" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYK90BCGFD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TYK90BCGFD');
+  </script>
+</body>
+
 </html>
