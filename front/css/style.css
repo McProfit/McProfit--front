@@ -1697,6 +1697,7 @@ img {
 @media (max-width: 1130px) {
     .screen--one .email-marketing {
         margin-left: 0;
+        margin-bottom: 40px;
     }
     .screen--one .email-marketing::after {
         display: none;
@@ -2018,6 +2019,8 @@ img {
         height: auto;
     }
     .screen--two .toolbox-list .cta-pitch {
+        padding-top: 0;
+        
         order: 3;
     }
     .screen--two .toolbox-list .insales {
@@ -2055,7 +2058,13 @@ img {
         width: 100%;
     }
     .screen--one .center {
+        margin-bottom: 60px;
+        
+        font-weight: 400;
         text-align: center;
+    }
+    .screen--one .section-ideal-client {
+        margin-top: 50px;
     }
 }
 
@@ -2079,5 +2088,16 @@ img {
 
     .footer .socm-list {
         width: 300px;
+    }
+}
+
+@media (max-width: 375px) {
+    .screen--four .descr::before {
+        display: none;
+    }
+    .screen--four .descr {
+        border-left: 1.5px #A84F46 solid;
+        border-top: 1.5px #A84F46 solid;
+        border-bottom: 1.5px #A84F46 solid;
     }
 }
