@@ -1963,13 +1963,17 @@ img {
     .screen--four .lead {
         flex-wrap: wrap;
         
-        padding: 2.5px 10px;
+        padding: 10px 10px;
         
         height: auto;
 
         border: 2px solid #DCA651;
+        border-top: 0;
+        border-right: 0;
     }
     .screen--four .lead .title {
+        margin-top: 0;
+        
         font-weight: 400;
     }
     .screen--three .integr-list {
@@ -2045,6 +2049,14 @@ img {
     .footer .mcprofit-tm {
         margin-bottom: 45px;
     }
+
+    .screen--one .icp-block {
+        max-width: 350px;
+        width: 100%;
+    }
+    .screen--one .center {
+        text-align: center;
+    }
 }
 
 @media (max-width: 425px) {
@@ -2063,5 +2075,9 @@ img {
     .screen--zero .features--container,
     .main--offer .cta--container {
         margin-top: 40px;
+    }
+
+    .footer .socm-list {
+        width: 300px;
     }
 }
