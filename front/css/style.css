@@ -1927,6 +1927,16 @@ a {
     .screen--three .integr-list {
         margin-bottom: 60px;
     }
+    
+    .screen--two .toolbox-list .cta-pitch {
+        max-width: 337px;
+        padding-top: 0;
+        
+        order: 3;
+    }
+    .screen--two .toolbox-list .insales {
+        order: 6;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1983,16 +1993,14 @@ a {
     }
     .screen--four .nav-list {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
         column-gap: 10px;
         row-gap: 10px;
         justify-content: space-around;
         
         width: 100%;
     }
-    .screen--four .descr::before {
-        height: 185px;
-    }
+
     .screen--four .nav-list .pitch {
         max-width: 220px;
         font-weight: 400;
@@ -2061,14 +2069,6 @@ a {
         padding: 5px 0;
         height: auto;
     }
-    .screen--two .toolbox-list .cta-pitch {
-        padding-top: 0;
-        
-        order: 3;
-    }
-    .screen--two .toolbox-list .insales {
-        order: 6;
-    }
     .screen--two .consult {
         margin-left: auto;
         margin-right: auto;
@@ -2109,6 +2109,34 @@ a {
     .screen--one .section-ideal-client {
         margin-top: 50px;
     }
+
+    .screen--five .system-list {
+        margin-top: 60px;
+    }
+    .screen--seven .section {
+        margin-top: 50px;
+    }
+    .screen--seven .section-title {
+        margin-bottom: 0;
+    }
+    .screen--seven .scoupe {
+        margin-top: 40px;
+    }
+    .screen--seven .cta--master {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 560px) {
+    .screen--four .nav-list {
+        grid-template-columns: auto auto
+    }
+}
+
+@media (max-width: 450px) {
+    .screen--four .descr::before {
+        height: 185px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -2131,6 +2159,11 @@ a {
 
     .footer .socm-list {
         width: 300px;
+    }
+
+    .screen--one .content-hub .hub-list .pitch {
+        width: 100%;
+        float: none;
     }
 }
 
