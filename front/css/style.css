@@ -107,6 +107,11 @@ body {
   color: #172629;
 }
 
+a {
+    text-decoration: none;
+    color: none;
+}
+
 img {
     width: 100%;
 }
@@ -156,7 +161,7 @@ img {
     
     color: #FFFFFF;
     background: #A84F46;
-    border: #A84F46;
+    border: 2px solid #A84F46;
 }
 .cta--slave {
     font-family: 'Noto Sans';
@@ -169,6 +174,12 @@ img {
     border: 2px solid #A84F46;
     background: transparent;
 }
+.cta--master,
+.cta--slave,
+a {
+    cursor: pointer;
+}
+
 .section-title,
 .section--title {
     width: 100%;
@@ -1548,6 +1559,9 @@ img {
 .footer .pitch,
 .footer a {
     color: #ffff;
+}
+.footer a {
+    text-decoration: underline;
 }
 .footer .section {
     margin-top: 60px;
