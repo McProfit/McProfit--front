@@ -448,21 +448,33 @@ img {
 }
 .icp-area-one {
     grid-area: starter;
+
+    order: 1;
 }
 .icp-area-two {
     grid-area: wise;
+
+    order: 2;
 }
 .icp-area-three {
     grid-area: email-marketing;
+
+    order: 3;
 }
 .icp-area-four {
     grid-area: food;
+
+    order: 4;
 }
 .icp-area-five {
     grid-area: hyper;
+
+    order: 5;
 }
 .icp-area-six {
     grid-area: hub;
+
+    order: 6;
 }
 .screen--one .icp-block .title {
     margin-left: 20px;
@@ -1666,6 +1678,14 @@ img {
     .main--offer .cta--slave-2 {
         max-width: 270px;
     }
+    .screen--one .section-ideal-client {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .screen--one .section-title {
+        text-align: center;
+    }
 }
 @media (max-width: 1170px) {
     .screen--one .email-marketing {
@@ -1933,6 +1953,29 @@ img {
     }
     .screen--four .lead .title {
         font-weight: 400;
+    }
+    .screen--three .integr-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .screen--three .integr-list .pitch {
+        transform: rotate(55deg);
+    }
+    .screen--three .integr-list .caption {
+        transform: rotate(-55deg);
+    }
+
+    .screen--five .system-list .pitch {
+        width: 120px;
+        height: 133px;
+    }
+    .screen--five .system-list .caption {
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .mob-hide {
+        display: none;
     }
 }
 
