@@ -1251,8 +1251,9 @@ img {
     display: grid;
     grid-template-columns: auto auto auto;
     align-content: center;
-    
-    width: 629px;
+
+    width: 100%;
+    max-width: 629px;
     height: 48px;
 
     padding: 0;
@@ -1377,8 +1378,9 @@ img {
 }
 .screen--six .disclaimer {
     position: relative;
-    
-    width: 440px;
+
+    width: 100%;
+    max-width: 440px;
     
     padding-left: 46px;
 
@@ -1763,6 +1765,10 @@ img {
     .screen--two .toolbox-list .startup::before {
         width: 88px;
     }
+    .screen--two .toolbox-list .jivosite::before {
+        width: 80px;
+        height: 80px;
+    }
 
     .screen--two .toolbox-list .pitch .title,
     .screen--two .toolbox-list .cta-pitch .title {
@@ -1788,6 +1794,7 @@ img {
 
         grid-area: img;
     }
+    .screen--two .consult,
     .screen--two .toolbox-list .cta-pitch,
     .screen--two .toolbox-list .pitch {
         width: 98%;
@@ -1869,6 +1876,13 @@ img {
         width: 89px;
         height: 65px;
     }
+    .screen--four .section {
+        margin-top: 0;
+    }
+
+    .screen--three .integr-list {
+        margin-bottom: 60px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1920,16 +1934,20 @@ img {
             "lead";
         grid-template-columns: auto;
 
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .screen--four .nav-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 10px;
         row-gap: 10px;
+        justify-content: space-around;
         
         width: 100%;
+    }
+    .screen--four .descr::before {
+        height: 185px;
     }
     .screen--four .nav-list .pitch {
         max-width: 220px;
@@ -1960,22 +1978,72 @@ img {
         justify-content: space-around;
     }
     .screen--three .integr-list .pitch {
-        transform: rotate(55deg);
-    }
-    .screen--three .integr-list .caption {
-        transform: rotate(-55deg);
+        padding: 20px;
+
+        width: 132px;
+        height: 132px;
+
+        margin: 0;
     }
 
     .screen--five .system-list .pitch {
         width: 120px;
         height: 133px;
     }
+    .screen--six .disclaimer,
+    .screen--six .privacy-warning,
+    .screen--three .integr-list .pitch,
+    .screen--six .form-control,
     .screen--five .system-list .caption {
         font-size: 13px;
         line-height: 15px;
     }
+    .screen--six .form-control {
+        align-items: baseline;   
+    }
     .mob-hide {
         display: none;
+    }
+    .screen--six .statement-select {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 10px;
+        
+        padding: 5px 0;
+        height: auto;
+    }
+    .screen--two .toolbox-list .cta-pitch {
+        order: 3;
+    }
+    .screen--two .toolbox-list .insales {
+        order: 6;
+    }
+    .screen--two .consult {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .screen--two .toolbox-list .cta-pitch::before {
+        height: 182px;
+    }
+
+    .screen--six .requisites .attention,
+    .screen--six .requisites .entry,
+    .screen--six .cta--master {
+        width: 100%;   
+    }
+
+    .screen--six .requisites .attention {
+        height: auto;
+    }
+    .footer .mcprofit-tm,
+    .footer .contacts,
+    .footer .social-media {
+        margin-left: 15px;
+    }
+    .footer .mcprofit-tm {
+        margin-bottom: 45px;
     }
 }
 
