@@ -1705,12 +1705,20 @@ a {
     font-size: 11px;
     line-height: 15px;
 }
+.popups .cta--slave,
 .popups .cta--master {
-    padding: 5px 15px;
+    padding: 5px 35px;
 }
 .popups .thank-you {
     max-width: 500px;
 
+    margin-left: auto;
+    margin-right: auto;
+}
+.popups .thank-you .cta--slave {
+    display: flex;
+    
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
