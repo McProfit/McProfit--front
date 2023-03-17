@@ -1709,6 +1709,7 @@ a {
 .popups .cta--master {
     padding: 5px 35px;
 }
+.popups .fail,
 .popups .thank-you {
     max-width: 500px;
 
@@ -1728,6 +1729,15 @@ a {
 }
 .popups a {
     color: #A84F46;
+}
+.popups .kitty {
+    display: flex;
+    
+    width: auto;
+    height: 150px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 .close-modal-icon-container {
   position: absolute;
