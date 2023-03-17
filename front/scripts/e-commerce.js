@@ -2,7 +2,9 @@ const p_accounting = document.querySelector(".popup-help-accounting");
 const p_catalog = document.querySelector(".popup-help-catalog");
 const p_cx = document.querySelector(".popup-help-cx");
 const overlay = document.querySelector(".background-for-popups");
-const p_cls = document.querySelector(".button-close"); 
+const p_cls = document.querySelector(".button-close");
+
+
 
 function s_p_a() {
     p_accounting.classList.remove("visual-hidden");
