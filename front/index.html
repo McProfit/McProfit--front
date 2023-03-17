@@ -339,6 +339,75 @@
         </div>
       </div>
     </footer>
+    <div class="background-for-popups"></div>
+    <div class="popups popup-help-accounting">
+      <section class="cont">
+        <h2 class="section-title">Помощь в систематизации бизнеса</h2>
+        <div class="button-close close-modal-icon-container" aria-label="Кнопочка закрыть">
+	      <div class="close-modal-line-one"></div>
+	      <div class="close-modal-line-two"></div>
+	    </div>
+        <form class="popup-form">
+          <input class="pitch entry" placeholder="Как к вам обращаться?*">
+          <input class="pitch entry" placeholder="www-адрес вашего интернет-магазина*">
+          <input class="pitch entry" placeholder="Количество заказов в месяц">
+          <input class="pitch entry" placeholder="Телефон для связи*">
+          <input class="pitch entry" placeholder="Telegram">
+          <p class="pitch attention"><span class="star">*</span> Поля отмеченные звёздочкой обязательны к заполнению</p>
+          <p class="pitch small">Отправляя заявку, Вы автоматически соглашаетесь с нашей <a href="">политикой приватности и конфиденциальности</a></p>
+          <button class="cta--master">Отправить заявку</button> 
+        </form>
+        <div class="thank-you"></div>
+        <div class="fail"></div>
+      </section>
+    </div>
+    <script>
+     var headerButton = document.querySelector(".butt");     // Кнопочка в хидере "Хочу..."
+     var modalLocation = document.querySelector(".modal-location"); // Всплывающее окно локации
+     var modalOverlay = document.querySelector(".modal-overlay");   // Подложка всплывающих окон
+     var modalBtnClose = document.querySelector(".button-close");   // Кнопочка закрытия модального окна
+     var sideMenu = document.querySelector(".side-menu");           // Боковое меню
+     var mobileMenuIcon = document.querySelector(".mobile-menu-icon-container"); // Иконка бокового меню
+     var btnUp = document.querySelector(".button-up");              // Кнопочка на верх
+     var windowWidth = window.innerWidth;                    // Ширина окна браузера
+
+     modalBtnClose.addEventListener("click", function () { // Если нажата кнопка закрыть, в модалке
+       modalBtnClose.classList.toggle("change");
+       setTimeout(function() {
+	     modalLocation.classList.add("visual-hidden");
+	     modalBtnClose.classList.toggle("change");
+       }, 400);
+       modalOverlay.classList.add("visual-hidden");
+     });
+
+     modalOverlay.addEventListener("click", function () { // Если клацнули на подложку
+       if (sideMenu.style.display === "block") {  
+	     sideMenu.style.display = "none";  
+	     mobileMenuIcon.classList.toggle("change");
+       } else {
+	     modalBtnClose.classList.toggle("change");
+	     setTimeout(function() {
+	       modalLocation.classList.add("visual-hidden");
+	       modalBtnClose.classList.toggle("change");
+	     }, 400);
+       }
+       modalOverlay.classList.add("visual-hidden");
+     });
+
+     window.addEventListener("keydown", function (evt) { // Если нажата клавиша эскейп, прячем модалку
+       if (evt.keyCode === 27) {
+	     if (!modalLocation.classList.contains("visual-hidden")) {
+	       evt.preventDefault();
+	       modalBtnClose.classList.toggle("change");
+	       setTimeout(function() {
+		     modalLocation.classList.add("visual-hidden");
+		     modalBtnClose.classList.toggle("change");
+	       }, 400);
+	       modalOverlay.classList.toggle("visual-hidden");
+	     }
+       }
+     });
+    </script>
     <script src="" async defer></script>
     <style>
      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap');
