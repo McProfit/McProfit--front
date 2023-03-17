@@ -347,7 +347,7 @@
 	      <div class="close-modal-line-one"></div>
 	      <div class="close-modal-line-two"></div>
 	    </div>
-        <form class="popup-form" style="display:none">
+        <form class="popup-form" style="display:grid">
           <input class="pitch entry" placeholder="Как к вам обращаться?*">
           <input class="pitch entry" placeholder="www-адрес вашего интернет-магазина*">
           <input class="pitch entry" placeholder="Количество заказов в месяц">
@@ -363,7 +363,7 @@
           <p class="pitch">Пока ожидаете, можете почитать нашу книгу <strong><a href="https://learn.mcprofit.biz" target="_blank">Системный маркетинг</a></strong></p>
           <button class="cta--slave">Отлично :)</button>
         </div>
-        <div class="fail">
+        <div class="fail" style="display:none">
           <h3 class="pitch failed">Произошёл технический сбой, от лица нашей команды мы приносим свои извинения за это недоразумение.</h3>
           <br>
           <h3 class="pitch">Попробуйте связаться с нами напрямую, одним из удобных способов</h3>
@@ -378,13 +378,12 @@
     </div>
     <script>
      var headerButton = document.querySelector(".butt");     // Кнопочка в хидере "Хочу..."
-     var modalLocation = document.querySelector(".modal-location"); // Всплывающее окно локации
-     var modalOverlay = document.querySelector(".modal-overlay");   // Подложка всплывающих окон
+     var modalLocation = document.querySelector(".popup-help-accounting"); // Всплывающее окно локации
+     var modalOverlay = document.querySelector(".background-for-popups");   // Подложка всплывающих окон
      var modalBtnClose = document.querySelector(".button-close");   // Кнопочка закрытия модального окна
      var sideMenu = document.querySelector(".side-menu");           // Боковое меню
      var mobileMenuIcon = document.querySelector(".mobile-menu-icon-container"); // Иконка бокового меню
-     var btnUp = document.querySelector(".button-up");              // Кнопочка на верх
-     var windowWidth = window.innerWidth;                    // Ширина окна браузера
+
 
      modalBtnClose.addEventListener("click", function () { // Если нажата кнопка закрыть, в модалке
        modalBtnClose.classList.toggle("change");
