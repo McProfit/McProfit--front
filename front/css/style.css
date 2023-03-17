@@ -857,6 +857,8 @@ a {
 .screen--two .toolbox-list .cta-pitch .title {
     color: #172629;
 }
+.screen--six .thank-you .pitch,
+.screen--siz .fail .pitch,
 .popups .pitch,
 .screen--six .big-entry,
 .screen--six .requisites .pitch,
@@ -1705,32 +1707,36 @@ a {
     font-size: 11px;
     line-height: 15px;
 }
+.screen--six .thank-you .cta--slave,
+.screen--six .fail .cta--slave,
 .popups .cta--slave,
 .popups .cta--master {
     padding: 5px 35px;
 }
-.popups .fail,
-.popups .thank-you {
+.fail,
+.thank-you {
     max-width: 500px;
 
     margin-left: auto;
     margin-right: auto;
 }
-.popups .thank-you .cta--slave {
+.thank-you .cta--slave {
     display: flex;
     
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
-.popups .sys-wiki {
+.thank-you .sys-wiki {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.screen--six .thank-you a,
+.screen--six .fail a,
 .popups a {
     color: #A84F46;
 }
-.popups .kitty {
+.fail .kitty {
     display: flex;
     
     width: auto;
@@ -1763,6 +1769,10 @@ a {
 .close-modal-line-two {
   margin: 8px auto;
   transform: rotate(45deg) translate(-4px, -3px);
+}
+
+.screen--six .thank-you {
+    margin-bottom: 50px;
 }
 
 
