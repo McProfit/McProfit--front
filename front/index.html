@@ -263,7 +263,7 @@
             <li class="pitch"><p>Не хватает рук выполнять все обязанности по интернет-магазинук?</p></li>
           </ul>
           <p class="link"><a href="https://learn.mcprofit.biz/E-commerce/firstquest.html">Прочитайте нашу статью об устройстве интернет-магазина</a></p>
-          <button class="cta--master">Мы наведём порядок</button>
+          <button class="cta--master" onclick="s_p_a()">Мы наведём порядок</button>
         </div>
         <div class="scoupe catalog">
           <h3 class="title">Наполнение каталога</h3>
@@ -274,7 +274,7 @@
             <li class="pitch"><p>Интегрируем со складским учётом</p></li>
             <li class="pitch"><p>Заполняем карту товара, делаем продающие постеры</p></li>
           </ul>
-          <button class="cta--master">Обсудить наполнение</button>
+          <button class="cta--master" onclick="s_p_c()">Обсудить наполнение</button>
         </div>
         <div class="scoupe profit">
           <h3 class="title">Повышаем доходность</h3>
@@ -284,7 +284,7 @@
             <li class="pitch"><p>Предложим и выполним решение</p></li>
           </ul>
           <p class="link"><a>Получите наш бесплатный набор материалов по оптимизации интернет-магазинов</a></p>
-          <button class="cta--master">Заказать консультацию</button>
+          <button class="cta--master" onclick="s_p_x()">Заказать консультацию</button>
         </div>
     </section>
     
@@ -343,7 +343,7 @@
     <div class="popups popup-help-accounting visual-hidden">
       <section class="cont">
         <h2 class="section-title">Помощь в систематизации бизнеса</h2>
-        <div class="button-close close-modal-icon-container" aria-label="Кнопочка закрыть">
+        <div onclick="cls_p(this)" class="button-close close-modal-icon-container" aria-label="Кнопочка закрыть">
 	      <div class="close-modal-line-one"></div>
 	      <div class="close-modal-line-two"></div>
 	    </div>
@@ -379,7 +379,7 @@
     <div class="popups popup-help-catalog visual-hidden">
       <section class="cont">
         <h2 class="section-title">Наполнение каталога интернет-магазина</h2>
-        <div class="button-close close-modal-icon-container" aria-label="Кнопочка закрыть">
+        <div onclick="cls_p(this)" class="button-close close-modal-icon-container" aria-label="Кнопочка закрыть">
 	      <div class="close-modal-line-one"></div>
 	      <div class="close-modal-line-two"></div>
 	    </div>
@@ -412,10 +412,10 @@
         </div>
       </section>
         </div>
-    <div class="popups popup-help-catalog visual-hidden">
+    <div class="popups popup-help-cx visual-hidden">
       <section class="cont">
         <h2 class="section-title">Аудит и оптимизация интернет-магазина</h2>
-        <div class="button-close close-modal-icon-container" aria-label="Кнопочка закрыть">
+        <div onclick="cls_p(this)" class="button-close close-modal-icon-container" aria-label="Кнопочка закрыть">
 	      <div class="close-modal-line-one"></div>
 	      <div class="close-modal-line-two"></div>
 	    </div>
@@ -448,52 +448,7 @@
         </div>
       </section>
     </div>
-    <script>
-     var modalLocation = document.querySelector(".popup-help-accounting"); // Всплывающее окно локации
-         var modalOverlay = document.querySelector(".background-for-popups");   // Подложка всплывающих окон
-     var modalBtnClose = document.querySelector(".button-close");   // Кнопочка закрытия модального окна
-     var sideMenu = document.querySelector(".side-menu");           // Боковое меню
-     var mobileMenuIcon = document.querySelector(".mobile-menu-icon-container"); // Иконка бокового меню
-     
-     
-     modalBtnClose.addEventListener("click", function () { // Если нажата кнопка закрыть, в модалке
-       modalBtnClose.classList.toggle("change");
-       setTimeout(function() {
-	     modalLocation.classList.add("visual-hidden");
-	     modalBtnClose.classList.toggle("change");
-       }, 400);
-       modalOverlay.classList.add("visual-hidden");
-     });
-     
-     modalOverlay.addEventListener("click", function () { // Если клацнули на подложку
-       if (sideMenu.style.display === "block") {  
-	     sideMenu.style.display = "none";  
-	     mobileMenuIcon.classList.toggle("change");
-       } else {
-	     modalBtnClose.classList.toggle("change");
-	     setTimeout(function() {
-	       modalLocation.classList.add("visual-hidden");
-	       modalBtnClose.classList.toggle("change");
-	         }, 400);
-       }
-       modalOverlay.classList.add("visual-hidden");
-     });
-     
-     window.addEventListener("keydown", function (evt) { // Если нажата клавиша эскейп, прячем модалку
-       if (evt.keyCode === 27) {
-	         if (!modalLocation.classList.contains("visual-hidden")) {
-	           evt.preventDefault();
-	           modalBtnClose.classList.toggle("change");
-	           setTimeout(function() {
-		         modalLocation.classList.add("visual-hidden");
-		         modalBtnClose.classList.toggle("change");
-	           }, 400);
-	           modalOverlay.classList.toggle("visual-hidden");
-	         }
-       }
-         });
-        </script>
-    <script src="" async defer></script>
+    <script src="scripts/e-commerce.js" async defer></script>
     <style>
      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap');
     </style>
