@@ -2297,6 +2297,13 @@ a {
   opacity: 0;
 }
 
+@media (max-height: 800px) {
+    .popups {
+        top: 5vh;
+        margin-top: 0;
+    }
+}
+
 @media (min-width: 1600px) {
     .popups {
         margin-left: -500px;
