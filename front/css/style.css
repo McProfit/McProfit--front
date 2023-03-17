@@ -1708,6 +1708,19 @@ a {
 .popups .cta--master {
     padding: 5px 15px;
 }
+.popups .thank-you {
+    max-width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.popups .sys-wiki {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.popups a {
+    color: #A84F46;
+}
 .close-modal-icon-container {
   position: absolute;
   top: 0;
