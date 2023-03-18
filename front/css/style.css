@@ -1667,6 +1667,10 @@ a {
     background-color: #172629;
 
     z-index: 777;
+
+    opacity: 1;
+    
+    transition: opacity .5s linear;
 }
 .popups {
     position: fixed;
@@ -1681,6 +1685,8 @@ a {
     background: radial-gradient(102.26% 102.26% at 50% 0%, #FFDA53 0%, #DCA651 100%);
 
     z-index: 800;
+
+    transition: all .5s linear;
 }
 .popups .popup-form {
     display: grid;
@@ -2369,6 +2375,3 @@ a {
         width: 1000px;
     }
 }
-
-
-

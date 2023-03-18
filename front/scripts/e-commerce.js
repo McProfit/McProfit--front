@@ -3,6 +3,7 @@ const p_catalog = document.querySelector(".popup-help-catalog");
 const p_cx = document.querySelector(".popup-help-cx");
 const overlay = document.querySelector(".background-for-popups");
 const p_cls = document.querySelector(".button-close");
+const p_clss = document.querySelectorAll(".button-close");
 
 const all_t_n = document.querySelectorAll(".screen--four .nav-list .pitch");
 const all_t_c = document.querySelectorAll(".screen--four .content-list .slide");
@@ -34,7 +35,7 @@ function s_p_x() {
     overlay.classList.remove("visual-hidden");
 }
 
-function cls_p(e) { 
+function cls_p(e) {
     e.classList.toggle("change");
     setTimeout(function() {
 	    p_accounting.classList.add("visual-hidden");
@@ -46,12 +47,12 @@ function cls_p(e) {
 };
 
 overlay.addEventListener("click", function () {
-	p_cls.classList.toggle("change");
+    p_clss.forEach((e) => { e.classList.toggle("change"); });
 	setTimeout(function() {
         p_accounting.classList.add("visual-hidden");
         p_catalog.classList.add("visual-hidden");
         p_cx.classList.add("visual-hidden");
-	    p_cls.classList.toggle("change");
+        p_clss.forEach((e) => { e.classList.toggle("change"); });
 	}, 400);
     
     overlay.classList.add("visual-hidden");
@@ -61,32 +62,32 @@ window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
 	    if (!p_accounting.classList.contains("visual-hidden")) {
 	        evt.preventDefault();
-	        p_cls.classList.toggle("change");
+            p_clss.forEach((e) => { e.classList.toggle("change"); });
 	        setTimeout(function() {
                 p_accounting.classList.add("visual-hidden");
                 
-	            p_cls.classList.toggle("change");
+                p_clss.forEach((e) => { e.classList.toggle("change"); });
 	        }, 400);
 	        overlay.classList.toggle("visual-hidden");
 	    }
     }
     if (!p_catalog.classList.contains("visual-hidden")) {
 	    evt.preventDefault();
-	    p_cls.classList.toggle("change");
+        p_clss.forEach((e) => { e.classList.toggle("change"); });
 	    setTimeout(function() {
             p_catalog.classList.add("visual-hidden");
             
-	        p_cls.classList.toggle("change");
+            p_clss.forEach((e) => { e.classList.toggle("change"); });
 	    }, 400);
 	    overlay.classList.toggle("visual-hidden");
 	}
     if (!p_cx.classList.contains("visual-hidden")) {
 	    evt.preventDefault();
-	    p_cls.classList.toggle("change");
+        p_clss.forEach((e) => { e.classList.toggle("change"); });
 	    setTimeout(function() {
             p_cx.classList.add("visual-hidden");
             
-	            p_cls.classList.toggle("change");
+            p_clss.forEach((e) => { e.classList.toggle("change"); });
 	    }, 400);
 	    overlay.classList.toggle("visual-hidden");
 	}
