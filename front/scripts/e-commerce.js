@@ -11,10 +11,12 @@ function t_s_p(n) {
     for (let i = 0; i < all_t_n.length; i++) {
         if (i === n) {
             all_t_n[i].classList.add("active");
+            all_t_c[i].classList.add("next-slide-animated");
             all_t_c[i].classList.remove("visual-hidden");
         } else {
             all_t_n[i].classList.remove("active");
             all_t_c[i].classList.add("visual-hidden");
+            all_t_c[i].classList.remove("next-slide-animated");
         }
     }
 }
