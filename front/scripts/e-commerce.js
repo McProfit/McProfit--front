@@ -23,39 +23,71 @@ function t_s_p(n) {
 }
 
 function s_p_a() {
+    p_accounting.classList.remove("hidde-animated");
     p_accounting.classList.remove("visual-hidden");
+    p_accounting.classList.add("show-animated");
     overlay.classList.remove("visual-hidden");
+    overlay.classList.add("show-animated");
+    overlay.classList.remove("hidde-animated");
 }
 function s_p_c() {
+    p_catalog.classList.remove("hidde-animated");
     p_catalog.classList.remove("visual-hidden");
+    p_catalog.classList.add("show-animated");
     overlay.classList.remove("visual-hidden");
+    overlay.classList.add("show-animated");
+    overlay.classList.remove("hidde-animated");
 }
 function s_p_x() {
+    p_cx.classList.remove("hidde-animated");
     p_cx.classList.remove("visual-hidden");
+    p_cx.classList.add("show-animated");
     overlay.classList.remove("visual-hidden");
+    overlay.classList.add("show-animated");
+    overlay.classList.remove("hidde-animated");
 }
 
 function cls_p(e) {
     e.classList.toggle("change");
     setTimeout(function() {
-	    p_accounting.classList.add("visual-hidden");
+        p_accounting.classList.add("hidde-animated");
+        p_accounting.classList.add("visual-hidden");
+        p_accounting.classList.remove("show-animated");
+        p_catalog.classList.add("hidde-animated");
         p_catalog.classList.add("visual-hidden");
+        p_catalog.classList.remove("show-animated");
+        p_cx.classList.add("hidde-animated");
         p_cx.classList.add("visual-hidden");
+        p_cx.classList.remove("show-animated");
 	    e.classList.toggle("change");
+
+        overlay.classList.add("visual-hidden");
     }, 400);
-    overlay.classList.add("visual-hidden");
+
+
+    overlay.classList.add("hidde-animated");
+    overlay.classList.remove("show-animated");
 };
 
 overlay.addEventListener("click", function () {
     p_clss.forEach((e) => { e.classList.toggle("change"); });
 	setTimeout(function() {
+        p_accounting.classList.add("hidde-animated");
         p_accounting.classList.add("visual-hidden");
+        p_accounting.classList.remove("show-animated");
+        p_catalog.classList.add("hidde-animated");
         p_catalog.classList.add("visual-hidden");
+        p_catalog.classList.remove("show-animated");
+        p_cx.classList.add("hidde-animated");
         p_cx.classList.add("visual-hidden");
+        p_cx.classList.remove("show-animated");
         p_clss.forEach((e) => { e.classList.toggle("change"); });
+
+        overlay.classList.add("visual-hidden");
 	}, 400);
-    
-    overlay.classList.add("visual-hidden");
+
+    overlay.classList.add("hidde-animated");
+    overlay.classList.remove("show-animated");
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -64,31 +96,44 @@ window.addEventListener("keydown", function (evt) {
 	        evt.preventDefault();
             p_clss.forEach((e) => { e.classList.toggle("change"); });
 	        setTimeout(function() {
+                p_accounting.classList.add("hidde-animated");
                 p_accounting.classList.add("visual-hidden");
+                p_accounting.classList.remove("show-animated");
                 
                 p_clss.forEach((e) => { e.classList.toggle("change"); });
+
+                overlay.classList.toggle("visual-hidden");
 	        }, 400);
-	        overlay.classList.toggle("visual-hidden");
 	    }
+    
+        if (!p_catalog.classList.contains("visual-hidden")) {
+	        evt.preventDefault();
+            p_clss.forEach((e) => { e.classList.toggle("change"); });
+	        setTimeout(function() {
+                p_catalog.classList.add("hide-animated");
+                p_catalog.classList.add("visual-hidden");
+                p_catalog.classList.remove("show-animated");
+                
+                p_clss.forEach((e) => { e.classList.toggle("change"); });
+
+                overlay.classList.toggle("visual-hidden");
+	        }, 400);
+	    }
+        if (!p_cx.classList.contains("visual-hidden")) {
+	        evt.preventDefault();
+            p_clss.forEach((e) => { e.classList.toggle("change"); });
+	        setTimeout(function() {
+                p_cx.classList.add("hide-animated");
+                p_cx.classList.add("visual-hidden");
+                p_cx.classList.remove("show-animated");
+                
+                p_clss.forEach((e) => { e.classList.toggle("change"); });
+
+                overlay.classList.toggle("visual-hidden");
+	        }, 400);
+	    }
+
+        overlay.classList.add("hidde-animated");
+        overlay.classList.remove("show-animated");
     }
-    if (!p_catalog.classList.contains("visual-hidden")) {
-	    evt.preventDefault();
-        p_clss.forEach((e) => { e.classList.toggle("change"); });
-	    setTimeout(function() {
-            p_catalog.classList.add("visual-hidden");
-            
-            p_clss.forEach((e) => { e.classList.toggle("change"); });
-	    }, 400);
-	    overlay.classList.toggle("visual-hidden");
-	}
-    if (!p_cx.classList.contains("visual-hidden")) {
-	    evt.preventDefault();
-        p_clss.forEach((e) => { e.classList.toggle("change"); });
-	    setTimeout(function() {
-            p_cx.classList.add("visual-hidden");
-            
-            p_clss.forEach((e) => { e.classList.toggle("change"); });
-	    }, 400);
-	    overlay.classList.toggle("visual-hidden");
-	}
 });

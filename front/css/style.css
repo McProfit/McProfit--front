@@ -1667,10 +1667,6 @@ a {
     background-color: #172629;
 
     z-index: 777;
-
-    opacity: 1;
-    
-    transition: opacity .5s linear;
 }
 .popups {
     position: fixed;
@@ -1685,8 +1681,6 @@ a {
     background: radial-gradient(102.26% 102.26% at 50% 0%, #FFDA53 0%, #DCA651 100%);
 
     z-index: 800;
-
-    transition: all .5s linear;
 }
 .popups .popup-form {
     display: grid;
@@ -1812,6 +1806,31 @@ a {
     animation: nextslide .5s alternate;
 }
 
+@keyframes add-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.show-animated {
+    animation: add-opacity .5s alternate;
+}
+
+@keyframes del-opacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.hidde-animated {
+    animation: del-opacity .5s alternate;
+}
 
 
 @media (max-width: 1439px) {
