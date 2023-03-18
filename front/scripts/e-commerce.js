@@ -4,7 +4,20 @@ const p_cx = document.querySelector(".popup-help-cx");
 const overlay = document.querySelector(".background-for-popups");
 const p_cls = document.querySelector(".button-close");
 
+const all_t_n = document.querySelectorAll(".screen--four .nav-list .pitch");
+const all_t_c = document.querySelectorAll(".screen--four .content-list .slide");
 
+function t_s_p(n) {
+    for (let i = 0; i < all_t_n.length; i++) {
+        if (i === n) {
+            all_t_n[i].classList.add("active");
+            all_t_c[i].classList.remove("visual-hidden");
+        } else {
+            all_t_n[i].classList.remove("active");
+            all_t_c[i].classList.add("visual-hidden");
+        }
+    }
+}
 
 function s_p_a() {
     p_accounting.classList.remove("visual-hidden");
