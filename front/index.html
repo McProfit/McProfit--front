@@ -244,28 +244,28 @@
     <section class="screen--six flex">
       <div class="section">
         <h2 class="section--title" id="feedback">Заявка на сотрудничество</h2>
-        <form class="feedback-form" id="feedback">
+        <form class="feedback-form" id="leadForm" onsubmit="SendFeedback(event)">
           <fieldset class="statement-select">
             <label class="form-control"  for="consult">
-              <input type="radio" id="consult" name="statement" value="consult"
-                     checked>
+              <input type="radio" id="consult" name="statement" value="1"
+                     checked data-rules='[]'>
               Консультация</label>
-             <label class="form-control" for="talk">
-              <input type="radio" id="talk" name="statement" value="talk">
+              <label class="form-control" for="talk">
+              <input type="radio" id="talk" name="statement" value="2" data-rules='[]'>
               Обсудить работу</label>
-             <label class="form-control" for="partner">
-              <input type="radio" id="partner" name="statement" value="partner">
+              <label class="form-control" for="partner">
+              <input type="radio" id="partner" name="statement" value="3" data-rules='[]'>
               Партнёрство</label>
           </fieldset>
           <div class="requisites flex-wrap space-between">
-            <input class="pitch entry" placeholder="Как к Вам обращаться *">
-            <input class="pitch entry" placeholder="Ваш рабочий e-mail">
-            <input class="pitch entry" placeholder="Ваш рабочий telegram *">
-            <input class="pitch entry" placeholder="Название Вашей компании">
-            <input class="pitch entry" placeholder="Номер телефона для связи *">
+            <input type="name" class="pitch entry" placeholder="Как к Вам обращаться *" name="name" data-rules='["required","string", "minimum:3"]'>
+            <input type="email" class="pitch entry" placeholder="Ваш рабочий e-mail" name="email" data-rules='["required","email"]'>
+            <input type="telegram" class="pitch entry" placeholder="Ваш рабочий telegram *" name="telegram"  data-rules='["required","string", "minimum:3"]'>
+            <input type="company" class="pitch entry" placeholder="Название Вашей компании" name="company" data-rules='[]'>
+            <input type="phone" class="pitch entry" placeholder="Номер телефона для связи *" name="phone"  data-rules='["required","string", "minimum:7"]'>
             <p class="pitch attention"><span class="star">*</span> Поля отмеченные звёздочкой обязательны к заполнению</p>
           </div>
-        <textarea class="pitch big-entry">Оставляя заявку на консультацию, обозначьте максимально полный список интересующих вопросов -- так мы сможем подготовить необходимые материалы и мы сэкономим время друг друга
+        <textarea class="pitch big-entry" name="comment">Оставляя заявку на консультацию, обозначьте максимально полный список интересующих вопросов -- так мы сможем подготовить необходимые материалы и мы сэкономим время друг друга
         </textarea>
         <p class="pitch disclaimer">Мы оставляем за собой право не отвечать на недостаточно заполненные заявки</p>
         <p class="privacy-warning"><a>Отправляя заявку Вы выражаете своё согласие с нашей политикой конфиденциальности и приватности</a></p>
@@ -275,7 +275,7 @@
           <h3 class="pitch">Мы зафиксировали Ваше обращение, мы свяжемся с Вами в течении 15 минут или на следующее утро, если заявка была оставлена после 19-00</h3>
           <img class="sys-wiki" src="img/sys.svg" alt="Системный маркетинг от McProfit" width="130px" height="130px">
           <p class="pitch">Пока ожидаете, можете почитать нашу книгу <strong><a href="https://learn.mcprofit.biz" target="_blank">Системный маркетинг</a></strong></p>
-          <button class="cta--slave">Ещё одна заявка</button>
+          <button class="cta--slave" onclick="againFeedback()">Ещё одна заявка</button>
         </div>
         <div class="fail visual-hidden">
           <h3 class="pitch failed">Произошёл технический сбой, от лица нашей команды мы приносим свои извинения за это недоразумение.</h3>
@@ -388,12 +388,12 @@
 	      <div class="close-modal-line-one"></div>
 	      <div class="close-modal-line-two"></div>
 	    </div>
-        <form class="popup-form">
-          <input class="pitch entry" placeholder="Как к вам обращаться?*">
-          <input class="pitch entry" placeholder="www-адрес вашего интернет-магазина*">
-          <input class="pitch entry" placeholder="Количество заказов в месяц">
-          <input class="pitch entry" placeholder="Телефон для связи*">
-          <input class="pitch entry" placeholder="Telegram">
+        <form class="popup-form" id="sysLead" onsubmit="SendSys(event)">
+          <input type="name" name="name" class="pitch entry" placeholder="Как к вам обращаться?*"  data-rules='["required","string", "minimum:3"]'>
+          <input type="www" name="www" class="pitch entry" placeholder="www-адрес вашего интернет-магазина*"  data-rules='["required","string", "minimum:4"]'>
+          <input name="count" class="pitch entry" placeholder="Количество заказов в месяц" data-rules='[]'>
+          <input type="phone" name="phone" class="pitch entry" placeholder="Телефон для связи*"  data-rules='["required","string", "minimum:7"]'>
+          <input name="telegram" class="pitch entry" placeholder="Telegram" data-rules='[]'>
           <p class="pitch attention"><span class="star">*</span> Поля отмеченные звёздочкой обязательны к заполнению</p>
           <p class="pitch small">Отправляя заявку, Вы автоматически соглашаетесь с нашей <a href="/privacy-policy.html">политикой приватности и конфиденциальности</a></p>
           <button class="cta--master">Отправить заявку</button> 
@@ -402,7 +402,7 @@
           <h3 class="pitch">Мы зафиксировали Ваше обращение, мы свяжемся с Вами в течении 15 минут или на следующее утро, если заявка была оставлена после 19-00</h3>
           <img class="sys-wiki" src="img/sys.svg" alt="Системный маркетинг от McProfit" width="130px" height="130px">
           <p class="pitch">Пока ожидаете, можете почитать нашу книгу <strong><a href="https://learn.mcprofit.biz" target="_blank">Системный маркетинг</a></strong></p>
-          <button class="cta--slave">Отлично :)</button>
+          <button class="cta--slave" onclick="cls_p(this)">Отлично :)</button>
         </div>
         <div class="fail visual-hidden">
           <h3 class="pitch failed">Произошёл технический сбой, от лица нашей команды мы приносим свои извинения за это недоразумение.</h3>
@@ -424,12 +424,12 @@
 	      <div class="close-modal-line-one"></div>
 	      <div class="close-modal-line-two"></div>
 	    </div>
-        <form class="popup-form">
-          <input class="pitch entry" placeholder="Как к вам обращаться?*">
-          <input class="pitch entry" placeholder="www-адрес вашего интернет-магазина*">
-          <input class="pitch entry" placeholder="Сколько товара добавить?">
-          <input class="pitch entry" placeholder="Телефон для связи*">
-          <input class="pitch entry" placeholder="Telegram">
+        <form id="catalogLead" class="popup-form" onsubmit="SendCat(event)">
+          <input name="name" class="pitch entry" placeholder="Как к вам обращаться?*"  data-rules='["required","string", "minimum:3"]'>
+          <input name="www" class="pitch entry" placeholder="www-адрес вашего интернет-магазина*"  data-rules='["required","string", "minimum:4"]'>
+          <input name="count" class="pitch entry" placeholder="Сколько товара добавить?" data-rules='[]'>
+          <input name="phone" class="pitch entry" placeholder="Телефон для связи*"  data-rules='["required","string", "minimum:7"]'>
+          <input name="telegram" class="pitch entry" placeholder="Telegram" data-rules='[]'>
           <p class="pitch attention"><span class="star">*</span> Поля отмеченные звёздочкой обязательны к заполнению</p>
           <p class="pitch small">Отправляя заявку, Вы автоматически соглашаетесь с нашей <a href="/privacy-policy.html">политикой приватности и конфиденциальности</a></p>
           <button class="cta--master">Отправить заявку</button> 
@@ -438,7 +438,7 @@
           <h3 class="pitch">Мы зафиксировали Ваше обращение, мы свяжемся с Вами в течении 15 минут или на следующее утро, если заявка была оставлена после 19-00</h3>
           <img class="sys-wiki" src="img/sys.svg" alt="Системный маркетинг от McProfit" width="130px" height="130px">
           <p class="pitch">Пока ожидаете, можете почитать нашу книгу <strong><a href="https://learn.mcprofit.biz" target="_blank">Системный маркетинг</a></strong></p>
-          <button class="cta--slave">Отлично :)</button>
+          <button class="cta--slave" onclick="cls_p(this)">Отлично :)</button>
         </div>
         <div class="fail visual-hidden">
           <h3 class="pitch failed">Произошёл технический сбой, от лица нашей команды мы приносим свои извинения за это недоразумение.</h3>
@@ -460,12 +460,12 @@
 	      <div class="close-modal-line-one"></div>
 	      <div class="close-modal-line-two"></div>
 	    </div>
-        <form class="popup-form">
-          <input class="pitch entry" placeholder="Как к вам обращаться?*">
-          <input class="pitch entry" placeholder="www-адрес вашего интернет-магазина*">
-          <input class="pitch entry" placeholder="Сколько продаж в месяц?">
-          <input class="pitch entry" placeholder="Телефон для связи*">
-          <input class="pitch entry" placeholder="Telegram">
+        <form id="optLead" class="popup-form" onsubmit="SendOpt(event)">
+          <input name="name" class="pitch entry" placeholder="Как к вам обращаться?*"  data-rules='["required","string", "minimum:3"]'>
+          <input name="www" class="pitch entry" placeholder="www-адрес вашего интернет-магазина*"  data-rules='["required","string", "minimum:4"]'>
+          <input name="count" class="pitch entry" placeholder="Сколько продаж в месяц?">
+          <input name="phone" class="pitch entry" placeholder="Телефон для связи*"  data-rules='["required","string", "minimum:7"]'>
+          <input name="telegram" class="pitch entry" placeholder="Telegram">
           <p class="pitch attention"><span class="star">*</span> Поля отмеченные звёздочкой обязательны к заполнению</p>
           <p class="pitch small">Отправляя заявку, Вы автоматически соглашаетесь с нашей <a href="/privacy-policy.html">политикой приватности и конфиденциальности</a></p>
           <button class="cta--master">Отправить заявку</button> 
@@ -474,7 +474,7 @@
           <h3 class="pitch">Мы зафиксировали Ваше обращение, мы свяжемся с Вами в течении 15 минут или на следующее утро, если заявка была оставлена после 19-00</h3>
           <img class="sys-wiki" src="img/sys.svg" alt="Системный маркетинг от McProfit" width="130px" height="130px">
           <p class="pitch">Пока ожидаете, можете почитать нашу книгу <strong><a href="https://learn.mcprofit.biz" target="_blank">Системный маркетинг</a></strong></p>
-          <button class="cta--slave">Отлично :)</button>
+          <button class="cta--slave" onclick="cls_p(this)">Отлично :)</button>
         </div>
         <div class="fail visual-hidden">
           <h3 class="pitch failed">Произошёл технический сбой, от лица нашей команды мы приносим свои извинения за это недоразумение.</h3>
@@ -489,9 +489,7 @@
         </div>
       </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/gh/mattkingshott/iodine@3/dist/iodine.min.js" defer></script>
     <script src="scripts/e-commerce.js" async defer></script>
-    <style>
-     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap');
-    </style>
   </body>
 </html>
