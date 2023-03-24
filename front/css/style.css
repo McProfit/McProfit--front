@@ -1279,17 +1279,20 @@ a {
     margin-top: 29px;
 }
 
+.screen--privacy,
 .screen--six {
     background: #172629;
+}
+.screen--privacy .section,
+.screen--six .section {
+    padding-left: 40px;
+    padding-right: 40px;
+    background: #FFFDF8;
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .screen--six .section {
     margin-top: -63px;
     margin-bottom: 92px;
-    padding-left: 40px;
-    padding-right: 40px;
-    
-    background: #FFFDF8;
-    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .screen--six .section--title {
     margin-top: 63px;
@@ -2089,6 +2092,7 @@ a {
 
         max-width: 600px;
     }
+    .screen--privacy .section,
     .screen--six .section {
         padding-left: 20px;
         padding-right: 20px;
