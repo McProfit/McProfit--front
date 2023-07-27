@@ -4,6 +4,7 @@
     url("/fonts/NotoSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Noto Sans";
@@ -11,6 +12,7 @@
     url("/fonts/NotoSans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Noto Sans";
@@ -18,6 +20,7 @@
     url("/fonts/NotoSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Noto Sans";
@@ -25,6 +28,7 @@
     url("/fonts/NotoSans-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -36,6 +40,7 @@
     url("/fonts/SegoeUI-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -47,6 +52,7 @@
     url("/fonts/SegoeUI.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -58,6 +64,7 @@
     url("/fonts/SegoeUI-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -69,6 +76,7 @@
     url("/fonts/SegoeUI-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Правила скрытия элементов */
@@ -167,6 +175,117 @@ img {
     background: #A84F46;
     border: 2px solid #A84F46;
 }
+
+.only-mobile {
+    display: block;
+}
+/* fixed top menu has a 40px height*/
+.mobile-menu {
+    width:40px;
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    background: #A84F46;
+    z-index: 990;
+}
+
+/* remove bullets and add transition effect */
+.mobile-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition: transform .75s ease-in-out;
+}
+
+/* fixed menu button */
+.mobile-menu .icon {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0;
+    
+    z-index: 991;
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(237 237 237);
+    text-align: center;
+}
+
+/* initial state: hide the menu */
+.mobile-menu>ul>li>ul {
+    position: fixed;
+    top: 0;
+    right: -520px;
+    width: 100%;
+    max-width: 520px;
+    bottom: 0;
+    background: #fefefe;
+    z-index: 990;
+    padding-top: 36px;
+    border-right: 1px solid #ddd;
+}
+
+/* Hover state, the menu button has been clicked*/
+
+/* scroll the menu into the page */
+.mobile-menu>ul>li:hover>ul {
+    transform: translate3d(-520px, 0, 0);
+}
+
+/* div on top of menu to simulate the close button, delay animation for .75s*/
+#closemenu {
+    position: fixed;
+    top: -40px;
+    right: 20px;
+    height: 40px;
+    z-index: 999;
+    line-height: 40px;
+    padding-left: 210px;
+    font-size: 36px;
+    transition: transform .05s ease-in-out;
+    transition-delay: 0.70s;
+}
+
+/* the the close menu button, uses ~ selector */
+.mobile-menu ul:hover~#closemenu {
+    transform: translate3d(0, 40px, 0);
+}
+
+/* styling */
+.mobile-menu a {
+    font-weight: 600;
+    width: 100%;
+
+    text-align: left;
+}
+#header,
+.mobile-menu a {
+    color: #A84F46;
+}
+.mobile-menu>ul>li>ul>li {
+    font-size: 20px;
+    padding: 0 8px;
+}
+
+.mobile-menu>ul>li>ul>li>a {
+    display: block;
+    text-decoration: none;
+    padding: 8px 0;
+}
+.mobile-menu .contacts-container {
+    font-weight: 600;
+    text-align: left;
+    color: #172629;
+}
+#header,
+.mobile-menu .caption {
+    font-weight: 900;
+    text-align: center;
+}
+
 .cta--slave {
     font-family: 'Noto Sans';
     font-style: normal;
@@ -720,6 +839,8 @@ a {
 .screen--one .content-hub .hub-list {
     margin-top: 30px;
 }
+.screen--six .requisites .pitch,
+.screen--six .privacy-warning a,
 .screen--one .content-hub .hub-list .pitch {
     color: #172629
 }
@@ -730,7 +851,7 @@ a {
     margin-top: 17px;
 }
 .screen--one .hub-list .pitch::before {
-    position: relative;
+    position: relative;
     display: inline-block;
     margin-right: 10px;
     content: '';
@@ -1410,9 +1531,6 @@ a {
     text-align: center;
 
     color: #172629;
-}
-.screen--six .requisites .entry::placeholder {
-    color: #BDBDBD;
 }
 .screen--six .requisites .pitch {
     color: #B8B8B8;
@@ -2133,7 +2251,10 @@ a {
         margin-left: -45vw;
     }
 
-    
+
+    .only-mobile {
+        display: block;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2144,6 +2265,7 @@ a {
         width: 86px;
         height: 25px;
     }
+    .mobile-menu,
     .socm-list li a {
         width: 25px;
         height: 25px;
@@ -2321,6 +2443,11 @@ a {
     }
     .screen--seven .cta--master {
         margin-top: 25px;
+    }
+
+    .mobile-menu .icon {
+        line-height: 25px;
+        font-size: 15px;
     }
 }
 
